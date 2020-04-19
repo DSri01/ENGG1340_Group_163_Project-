@@ -73,7 +73,7 @@ void Battle(string *Pname, string *Ename, int *Phealth, int *Phitp, int *Ehealth
     else{
       if(*Phealth == 0){
         cout<<"GAME OVER"<<endl;
-	cout<<"You can restart the game from the latest save by rerunning the game"<<endl;
+	cout<<"You can restart the game from the latest save by re-running the game"<<endl;
 	exit(0);
       }
       else{
@@ -91,17 +91,28 @@ void Battle(string *Pname, string *Ename, int *Phealth, int *Phitp, int *Ehealth
   move_type = 0;
   delete Pmove;
   Pmove = 0;
+  delete Ehealth;
+  Ehealth = 0;
+  delete Ehitp;
+  Ehitp = 0;
+  delete difficult;
+  difficult = 0;
   return;
 }
 
 int main(){
-  string Pname = "A1";
+  string *Pname = new string("A1");
   string *Ename = new string("B2");
   int *Phe = new int(5);
   int *Phi = new int(1);
   int *Ehe = new int(5);
   int *Ehi = new int(1);
   int *Dif = new int(10);
-  Battle(&Pname, Ename, Phe, Phi, Ehe, Ehi, Dif);
-  cout<<Pname<<endl;
+  Battle(Pname, Ename, Phe, Phi, Ehe, Ehi, Dif);
+  delete Pname;
+  Pname = 0;
+  delete Phe;
+  Phe = 0;
+  delete Phi;
+  Phi = 0;
 }
