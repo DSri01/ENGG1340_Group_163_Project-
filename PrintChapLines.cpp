@@ -25,16 +25,16 @@ void PrintChapLines(string *FileName, int *Lines){
     }
   }
   fin.close();
-  delete Lines;
-  Lines = 0;
   delete f;
   f = 0;
 }
-
+/*
 int main(){
   string *FN = new string("Chapter1.txt");
   int *L = new int(10);
   PrintChapLines(FN, L);
   delete FN;
   FN = 0;
-}
+  delete L;
+  L = 0;
+}*/

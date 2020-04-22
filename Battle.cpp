@@ -66,12 +66,12 @@ void Battle(string *Pname, string *Ename, int *Phealth, int *Phitp, int *Ehealth
 	*Ehealth -= *Phitp;
       }
     }
-    if(*Phealth != 0 && *Ehealth != 0){
+    if(*Phealth > 0 && *Ehealth > 0){
       cout<<"Your Health Points = "<<*Phealth<<endl;
       cout<<*Ename<<"'s Health Points = "<<*Ehealth<<endl;
     }
     else{
-      if(*Phealth == 0){
+      if(*Phealth <= 0){
         cout<<"GAME OVER"<<endl;
 	cout<<"You can restart the game from the latest save by re-running the game"<<endl;
 	exit(0);
@@ -99,7 +99,7 @@ void Battle(string *Pname, string *Ename, int *Phealth, int *Phitp, int *Ehealth
   difficult = 0;
   return;
 }
-
+/*
 int main(){
   string *Pname = new string("A1");
   string *Ename = new string("B2");
@@ -115,4 +115,4 @@ int main(){
   Phe = 0;
   delete Phi;
   Phi = 0;
-}
+}*/
