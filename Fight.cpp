@@ -33,11 +33,11 @@ void Fight(int *Psol, int *Esol){
   delete mercnum;
   mercnum = 0;
 }
-
+/*
 int main(){
   int *Pso = new int(1000);
   int *Eso = new int(50);
   Fight(Pso, Eso);
   delete Pso;
   Pso = 0;
-}
+}*/

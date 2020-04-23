@@ -4,11 +4,11 @@
 #include "save_game.h"
 using namespace std;
 
-void save_game(string *Pname, int *Phealth, int *Phitp, string *ChapNum){
+void save_game(string *Pname, int *Phealth, int *Phitp, int *Psol, string *ChapNum){
   string *FName = new string("");
   *FName = "Saved_Games/" + (*Pname) + (*ChapNum) + ".txt";
   ofstream fout(((*FName).c_str()));
-  fout<<*Pname<<" "<<*Phealth<<" "<<*Phitp;
+  fout<<*Pname<<" "<<*Phealth<<" "<<*Phitp<<" "<<*Psol;
   cout<<"Game Saved."<<endl;
   fout.close();
   ifstream fin("Saved_Games/Saved_Games.txt");
@@ -33,7 +33,7 @@ void save_game(string *Pname, int *Phealth, int *Phitp, string *ChapNum){
   delete FName;
   FName = 0;
 }
-
+/*
 int main(){
   string *Pna = new string("A");
   int *phe = new int(10);
@@ -48,4 +48,4 @@ int main(){
   phi = 0;
   delete ChaNum;
   ChaNum = 0;
-}
+}*/

@@ -4,7 +4,7 @@
 #include "load_game.h"
 using namespace std;
 
-void load_game(string *Pname, int *Phealth, int *Phitp, string *ChapNum){
+void load_game(string *Pname, int *Phealth, int *Phitp, int *Psol, string *ChapNum){
   string *FileName1 = new string("");
   string *FileName2 = new string("");
   string *FName = new string("");
@@ -14,18 +14,20 @@ void load_game(string *Pname, int *Phealth, int *Phitp, string *ChapNum){
     *FName = "Saved_Games/" + (*FileName1) + (*FileName2) + ".txt";
     ifstream fin((*FName).c_str());
     if(fin.fail()){
-      cout<<"Enter in correct format"<<endl;
+      cout<<"Enter in correct format, or, Enter correct Player Name and Chapter Number from above."<<endl;
     }
     else{
       cout<<"Load successful."<<endl;
       *ChapNum = *FileName2;
-      fin>>*Pname>>*Phealth>>*Phitp;
+      fin>>*Pname>>*Phealth>>*Phitp>>*Psol;
       break;
+      fin.close();
     }
   }
   cout<<"Player Name: "<<*Pname<<endl;
   cout<<"Player Health: "<<*Phealth<<endl;
   cout<<"Player Hit Points: "<<*Phitp<<endl;
+  cout<<"Player Soldiers: "<<*Psol<<endl;
   delete FileName1;
   FileName1 = 0;
   delete FileName2;
@@ -34,7 +36,7 @@ void load_game(string *Pname, int *Phealth, int *Phitp, string *ChapNum){
   FName = 0;
   return;
 }
-
+/*
 int main(){
   string *PN = new string("");
   int *PHE = new int(0);
@@ -49,4 +51,4 @@ int main(){
   PHI = 0;
   delete CHAP;
   CHAP = 0;
-}
+}*/
