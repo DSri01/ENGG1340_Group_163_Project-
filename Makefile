@@ -1,5 +1,7 @@
 FLAGS = -pedantic-errors -std=c++11
-THE_CONQUEST.o: THE_CONQUEST.cpp Battle.h PrintChapLines.h Choice.h Chap1.h Fight.h load_game.h save_game.h
+THE_CONQUEST.o: THE_CONQUEST.cpp Battle.h PrintChapLines.h Choice.h Chap1.h Fight.h load_game.h save_game.h Fortune_cookie.h
+	g++ $(FLAGS) -c $<
+Fortune_cookie.o: Fortune_cookie.cpp Fortune_cookie.h
 	g++ $(FLAGS) -c $<
 Chap1.o: Chap1.cpp Chap1.h Battle.h PrintChapLines.h Choice.h
 	g++ $(FLAGS) -c $<
