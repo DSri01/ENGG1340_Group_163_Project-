@@ -49,17 +49,17 @@ Most of the commits made are accompanied by appropriate messages. The functions 
 
 # Chapter 1 “The Farmlands”:
 Evening, Player(You) finds himself/herself in a village injured. Then a nurse tells you where she found you. You suddenly remember everything about yourself. You tell the nurse who you are, Prince/Princess PlayerName. She asks you to drink a potion while she goes away to call the village head. You fell asleep and you dream. You see yourself standing in your room. Your father, the king of Astonia, is standing in front of you, when suddenly a sword comes piercing through his heart. He falls down and you see your uncle holding the blood-covered sword. You wake up panting and find yourself tied to the bed. The village head is standing next to you. He says that he is your evil uncle’s supporter and that he will be rewarded if he hands you to him. He goes out. You cut the rope with the dagger (2 HIT POINT for every hit) that is hidden in your arm. Growling heard outside, you walk out, and see the village head looking at the source of the noise.(MAX HEALTH: 5) (Checkpoint 1 save)
-#   Choice 1: Either save the village head or go away.
+Choice 1: Either save the village head or go away.
       If save: find out what the beast is, choose from numbers 1-5(lion/cheetah/tiger/jaguar/leopard.). You pick up the shield and run   in front of the village head and defend him from the beasts’ claw. (MAIN CHARACTER FIGHT) (Max Health: 5, Hit Point: 1 Difficulty: 0 ) Completion rewards: +50 soldiers, new armour Max Health increases to 10, you get a sword (Hit point 4) + A safe route through the enchanted forest.
-      Else: All player stats remain the same. Beast attacks you after killing the village head. (MAIN CHARACTER FIGHT) (Max Health: 5, Hit Point: 1 Difficulty: 0 ). Next day, you will be attacked by 50 of your uncle’s soldiers after you reach the Enchanted forest.
+Else: All player stats remain the same. Beast attacks you after killing the village head. (MAIN CHARACTER FIGHT) (Max Health: 5, Hit Point: 1 Difficulty: 0 ). Next day, you will be attacked by 50 of your uncle’s soldiers after you reach the Enchanted forest.
 You go ahead. It’s morning time, you reach a hut by the river where you see an old woman is trying to fill a bucket and she collapses.
-#   Choice 2: Either help the lady or go away.
-    If help lady: Completion rewards: Health replenish potion +1, a horse (equivalent to 10 soldiers) and option to go to search for the old woman’s son who did not come home since yesterday.
-#   Choice 2a: Find son or not.
-    If yes: go to find the man. You go deep into the woods. You find him tied by cannibals. You go near him, the cannibals are in a distance but they see you.
-#   Choice 2a1: untie him or fight the cannibals yourself.
-    If untie: Number of cannibals faced = 5 (MEN FIGHT 0 soldiers LOSS)
-    Else: Number of cannibals faced =5(MEN FIGHT and soldiers killed (1-3)
+Choice 2: Either help the lady or go away.
+If help lady: Completion rewards: Health replenish potion +1, a horse (equivalent to 10 soldiers) and option to go to search for the old woman’s son who did not come home since yesterday.
+Choice 2a: Find son or not.
+If yes: go to find the man. You go deep into the woods. You find him tied by cannibals. You go near him, the cannibals are in a distance but they see you.
+Choice 2a1: untie him or fight the cannibals yourself.
+If untie: Number of cannibals faced = 5 (MEN FIGHT 0 soldiers LOSS)
+Else: Number of cannibals faced =5(MEN FIGHT and soldiers killed (1-3)
 If no army then, killed and GAME OVER.
 completion rewards: New ally Cameron. The man is an archer and commands 25 soldiers of his tribe Army strength +35.
     Else: You go ahead.
@@ -91,6 +91,12 @@ If no: His family comes, everyone is crying, you feel shameful. The bear dies. Y
 If you do not free: The bear’s family comes and when they see you leaving the bear, they think that you have trapped him, you face a force of 10 bears, equivalent to 150 soldiers and the bear’s son (24 Heath Points) and 5 Hit points.(MAIN CHARACTER FIGHT) Difficulty: 15 (Soldiers FIGHT 150)
 Else: You move forward.
 You come across a purple and blue flag and you can hear some people 
+
+Feeling tired from all that you have been through you decide to find a place to rest. You spot a cave behind the waterfall and decide to go there. You eat some fruits and try to catch some sleep. You awake to the sound of thunder and heavy rainfall. The rain is too heavy and it is nearly impossible to go out so you decide to wait a little longer. You spot some carvings on the walls of the cave and as you follow them you see that they lead deep inside the cave. You follow them and realize it goes deeper than you realized. You reach the end and find yourself amongst rocky mountains. 
+
+# Chapter 4:
+“Mountains”: The height you are at is high above a valley but when you look up, the peak is higher above still. The rain now is a drizzle and you spot a river down in the valley...You decide to go down and go along the river because you know that it will lead to your kingdom. You start to descend but it seems harder with the rocks slippery from the rain. You have to stop on top of a rock and figure out a better way. Choose * points according to choice(use the roots, use your weapons to stick into the crevices, wait for the rain to stop completely etc. if Dhruv u can think of something else). Finally you manage to reach down to the river bank and as you walk besides it you start to notice signs of some civilization. Which is odd Because no one knew that people lived here\
+
 Choice5: Find Out about the civilization 
 If yes: you carefully approach one of the huts and tentatively knock an old man appears. Seeing your condition he lets you in. You ask the man and his family about how all the people live here and why does no one know about it. They tell That they had been wrongly accused by the king’s brother Cyrus and banished from their village so they ended up here. 
 Choice 5a:Reveal your identity:
