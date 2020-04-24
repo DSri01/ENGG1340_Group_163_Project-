@@ -5,6 +5,7 @@
 #include "Chap1.h"
 #include "load_game.h"
 #include "save_game.h"
+#include "Fortune_cookie.h"
 using namespace std;
 
 void load(string *Pna, int *Phit, int *Pheal, int *Sol, string *ChapNum){
@@ -63,6 +64,14 @@ int main(){
   int *ChoiceInChap1 = new int(0);
   int *Psol = new int(0);
   load(Pname, Phitp, Phealth, Psol, ChapNum);
+  
+  cout<< "##  ##      ##"<<endl<<"##  ##      ##"<<endl<<"##  ##  ##  ##"<<endl<<"##  ##  ##  ##"<<endl<<"######      ##"<<endl<<"##  ##  ##  ##"<<endl<<"##  ##  ##    "<<endl<<"##  ##  ##  ##"<<endl<<"##  ##  ##  ##"<<endl;
+  cout<< "~~ Welcome to THE CONQUEST!~~"<<endl<< "Before We Begin Would You Like To Have A Fortune Cookie?"<<endl<< "press 'y' for yes and any other letter for no"<<endl;
+  cin >> yes_no;
+  if (yes_no=='Y' || yes_no=='y')
+	    Fortune_cookie();
+  cout <<"Well then, Lets begin our game"<<endl;
+  
   if(*ChapNum == "0"){
     cout<<"Enter your name. Please do not add any special character, numbers or 'space' character in your name."<<endl;
     while(true){
