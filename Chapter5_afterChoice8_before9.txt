@@ -1,0 +1,11 @@
+You defeat Darius. He now rests on his knees. 
+He apologises to you and begs for you to spare his life. 
+He says that he was just serving the throne, no matter who sits on it. 
+He was also loyal to your father, but he couldn’t save him or your family when Cyrus attacked them,
+and murdered them in cold blood in the darkness of the night. 
+He pledges to remain loyal to you, untill his very last breath.
+
+Now you are faced with a choice. You can either save Darius and trust his word or
+distrust every word that comes out of his mout and kill him for good. Press the number of your choice:
+1.  Save his life
+2.  Kill him
