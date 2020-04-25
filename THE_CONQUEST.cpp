@@ -3,6 +3,7 @@
 #include<string>
 #include<cctype>
 #include "Chap1.h"
+#include "Chap2.h"
 #include "load_game.h"
 #include "save_game.h"
 #include "Fortune_cookie.h"
@@ -106,8 +107,15 @@ int main(){
   }
   if(*ChapNum == "1"){
     cout<<endl;
+    cout<<"Chapter 1: THE FARMLANDS.\n\n";
     Chap1(Pname, Phitp, Phealth, Psol, ChoiceInChap1);
     *ChapNum = "2";
+  }
+  if(*ChapNum == "2"){
+    cout<<endl;
+    cout<<"Chapter 2: THE ENCHANTED FOREST.\n\n";
+    Chap2(Pname, Phitp, Phealth, Psol, ChoiceInChap1);
+    *ChapNum = "3";
     save(Pname, Phitp, Phealth, Psol, ChapNum);
   }
 //  cout<<*Pname<<" "<<*Phitp<<" "<<*Phealth<<" "<<*Psol<<" "<<*ChoiceInChap1<<endl;

@@ -1,17 +1,10 @@
 As you enter the thicket of the trees you immediately notice that this is no ordinary forest.
 The trees here were somehow unrealistically greener, shrubs stronger, flowers brighter.
 Even the air seemed thicker and unnaturally aromatic. It seemed as if the forest was trying to lure you in.
-
 Just as you are about to entre entranced by the beauty a woman stops you. Dazed by the sudden interruption it takes you a while to notice her.
 She warns you about the dangers that lay inside but you insist that you have to go through it. So, she tells you the safest route through the forest.
 Nevertheless, the safest path has its own perils.
 She tells you that at the edge of the forest you will have to fight at least 20 guards if not more
-And that’s not all, the forest she said was a home to creatures of the dark- abhorrent and cruel.
-
+And that's not all, the forest she said was a home to creatures of the dark- abhorrent and cruel.
 As you embark on the path thinking about a way to defeat the men at the edge you come face to face with a mysterious figure.
 Half like woman, half like a tree. Abysmal and abhorrently disfigured. Her eyes are red like hell fire, her mouth a mere slit in the tree bark.
-Choose how will approach this creature, press the number of your choice: 
-1.	Aggressively
-2.	Fearfully
-3.	Politely but cautiously
-4.	indifferently and in an ignoring manner... 
