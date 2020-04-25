@@ -19,9 +19,9 @@ void load_game(string *Pname, int *Phealth, int *Phitp, int *Psol, string *ChapN
     else{
       cout<<"Load successful."<<endl;
       *ChapNum = *FileName2;
-      fin>>*Pname>>*Phealth>>*Phitp>>*Psol;
-      break;
+      fin>>*Pname>>*Phitp>>*Phealth>>*Psol;
       fin.close();
+      break;
     }
   }
   cout<<"Player Name: "<<*Pname<<endl;

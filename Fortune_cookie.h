@@ -1,4 +1,6 @@
-#ifndef Fortune_cookie_H
-#define Fortune_cookie_H
+#ifndef FORTUNECOOKIE_H
+#define FORTUNECOOKIE_H
+
 void Fortune_cookie();
+
 #endif

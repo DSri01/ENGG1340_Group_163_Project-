@@ -17,7 +17,7 @@ void load(string *Pna, int *Phit, int *Pheal, int *Sol, string *ChapNum){
     cout<<"Available games to load: (Player name followed by Chapter number)"<<endl;
     string *f = new string("");
     ifstream fi("Saved_Games/Saved_Games.txt");
-    for(int i = 0; i < *SavedNum; i++){
+    for(int i = 0; i <= *SavedNum; i++){
       getline(fi,*f);
       cout<<*f<<endl;
     }
@@ -63,15 +63,17 @@ int main(){
   int *Phealth = new int(5);
   int *ChoiceInChap1 = new int(0);
   int *Psol = new int(0);
-  load(Pname, Phitp, Phealth, Psol, ChapNum);
-  
+  char *yes_no = new char('A');
   cout<< "##  ##      ##"<<endl<<"##  ##      ##"<<endl<<"##  ##  ##  ##"<<endl<<"##  ##  ##  ##"<<endl<<"######      ##"<<endl<<"##  ##  ##  ##"<<endl<<"##  ##  ##    "<<endl<<"##  ##  ##  ##"<<endl<<"##  ##  ##  ##"<<endl;
-  cout<< "~~ Welcome to THE CONQUEST!~~"<<endl<< "Before We Begin Would You Like To Have A Fortune Cookie?"<<endl<< "press 'y' for yes and any other letter for no"<<endl;
-  cin >> yes_no;
-  if (yes_no=='Y' || yes_no=='y')
-	    Fortune_cookie();
+  cout<< "~~ Welcome to THE CONQUEST!~~"<<endl<< "Before We Begin Would You Like To Have A Fortune Cookie?"<<endl<< "Enter 'Y' for yes and any other letter for no"<<endl;
+  cin >> *yes_no;
+  if (*yes_no == 'Y'){
+    Fortune_cookie();
+  }
   cout <<"Well then, Lets begin our game"<<endl;
-  
+  delete yes_no;
+  yes_no = 0;
+  load(Pname, Phitp, Phealth, Psol, ChapNum) ;
   if(*ChapNum == "0"){
     cout<<"Enter your name. Please do not add any special character, numbers or 'space' character in your name."<<endl;
     while(true){
