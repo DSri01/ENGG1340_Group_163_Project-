@@ -4,6 +4,7 @@
 #include<cctype>
 #include "Chap1.h"
 #include "Chap2.h"
+#include "Chap3.h"
 #include "load_game.h"
 #include "save_game.h"
 #include "Fortune_cookie.h"
@@ -24,6 +25,7 @@ void load(string *Pna, int *Phit, int *Pheal, int *Sol, string *ChapNum){
     }
     delete f;
     f = 0;
+    fi.close();
     char *C = new char(' ');
     cout<<"Do you want to load a game?\nEnter 'Y' for yes or 'N' for no."<<endl;
     while(true){
@@ -45,16 +47,23 @@ void load(string *Pna, int *Phit, int *Pheal, int *Sol, string *ChapNum){
 }
 
 void save(string *Pna, int *Pheal, int *Phit, int *Psol, string *ChapNum){
-  ifstream fin("Saved_Games/Saved_Games_num.txt");
-  int *SavedNum = new int(0);
-  fin>>*SavedNum;
-  fin.close();
-  save_game(Pna, Pheal, Phit, Psol, ChapNum);
-  ofstream fout("Saved_Games/Saved_Games_num.txt");
-  fout<<(*SavedNum + 1);
-  fout.close();
-  delete SavedNum;
-  SavedNum = 0;
+  cout<<"Do you want to save the game?\nEnter 'Y' for yes or any other character for no.\n";
+  char *c = new char('a');
+  cin>>*c;
+  if(*c == 'Y'){
+    ifstream fin("Saved_Games/Saved_Games_num.txt");
+    int *SavedNum = new int(0);
+    fin>>*SavedNum;
+    fin.close();
+    save_game(Pna, Pheal, Phit, Psol, ChapNum);
+    ofstream fout("Saved_Games/Saved_Games_num.txt");
+    fout<<(*SavedNum + 1);
+    fout.close();
+    delete SavedNum;
+    SavedNum = 0;
+  }
+  delete c;
+  c = 0;
 }
 
 int main(){
@@ -106,15 +115,19 @@ int main(){
     save(Pname, Phitp , Phealth, Psol, ChapNum);
   }
   if(*ChapNum == "1"){
-    cout<<endl;
-    cout<<"Chapter 1: THE FARMLANDS.\n\n";
+    cout<<"\nChapter 1: THE FARMLANDS.\n\n";
     Chap1(Pname, Phitp, Phealth, Psol, ChoiceInChap1);
     *ChapNum = "2";
   }
   if(*ChapNum == "2"){
-    cout<<endl;
-    cout<<"Chapter 2: THE ENCHANTED FOREST.\n\n";
+    cout<<"\nChapter 2: THE ENCHANTED FOREST.\n\n";
     Chap2(Pname, Phitp, Phealth, Psol, ChoiceInChap1);
+    *ChapNum = "3";
+    save(Pname, Phitp, Phealth, Psol, ChapNum);
+  }
+  if(*ChapNum == "3"){
+    cout<<"\nChapter 3: THE RIVER.\n\n";
+    Chap3(Pname, Phitp, Phealth, Psol);
     *ChapNum = "3";
     save(Pname, Phitp, Phealth, Psol, ChapNum);
   }
