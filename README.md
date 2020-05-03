@@ -12,32 +12,32 @@ The player is provided with different choices at different stages throughout the
 (Health Points/Hit Points/Soldiers) based on the outcome of his/her choice. 
 The points accumulated are used in battles and quests as the game progresses.
 
-
-## The Random Elements:
+## Coding requirements:
+### The Random Elements:
 The player is provided a random fortune cookie in the beginning of the game, with lucky color and lucky number for the day.\
 During the battles where soldiers fight, the loss of strength is calculated randomly (4% - 10% of the total number).\
 During some main character battles, where the strength of the opponent is random.\
 There are other random elements as well which will be described later in this document.
 
-## Data structures for storing game status:
+### Data structures for storing game status:
 Game status is saved at various levels of progress throughout the game.
 
-## Dynamic memory management:
+### Dynamic memory management:
 There is a frequent use of variables throughout the game which are dynamic, for instance,  the health points and the hit points etc.
 
-## File Input/Output:
+### File Input/Output:
 The game extensively uses file input/output to print the story and to save game status.
 
-## Program codes in multiple files:
+### Program codes in multiple files:
 The storylines are stored in various text files. \
 Moreover, there are a lot of functions (and their respective header files) defined in separate files,
 for instance, files for different chapters and the fortune cookie function etc.
 
-## Proper indentation and naming styles:
+### Proper indentation and naming styles:
 The program uses legible and easy to understand coding indentation. \
 The variables used are named so as to increase comprehension but are not so long as to lose ease of readability.
 
-## In-code documentation:
+### In-code documentation:
 Most of the commits made are accompanied by appropriate messages.\ 
 The functions too contain comments to make the code easier to understand.
 
