@@ -21,11 +21,9 @@ void Delete_game(){
       cout<<"Available games to load: (Player name followed by Chapter number)"<<endl;
       *f = "";
       ifstream fi("Saved_Games/Saved_Games.txt");
-      for(int i =0; i < *SavedNum; i++){
-        getline(fi, *f);
-	s.push_back(*f);
-	cout<<*f<<endl;
-//	cout<<s[i]<<endl;
+      while(getline(fi, *f)){
+	      s.push_back(*f);
+	      cout<<*f<<endl;
       }
       fi.close();
       cout<<"Do you want to delete any saved game?\nEnter 'Y' for yes or any other character for no."<<endl;
@@ -33,27 +31,26 @@ void Delete_game(){
       if(*C == 'Y'){
         *Fn1 = "";
         *Fn2 = "";
-	*Fname = "";
-	cout<<"Enter Player Name and Chapter (with space) to delete game.\n";
-	cin>>*Fn1>>*Fn2;
-	*Fname = "Saved_Games/" + (*Fn1) + (*Fn2) + ".txt";
-	if(!remove((*Fname).c_str())){
-	  cout<<"Enter correct player name and chapter number.\n";
-	}
-	else{
-	ofstream fout1("Saved_Games/Saved_Games_num.txt");
-	fout1<<(*SavedNum - 1);
-	fout1.close();
-	ofstream fout2("Saved_Games/Saved_Games.txt");
-	for(int i = 0; i < *SavedNum; i++){
-	  if(s[i] != (*Fn1 + *Fn2)){
-	  //  cout<<"S BEFORE INPUT"<<s[i]<<endl;
-	    fout2<<s[i]<<endl;
-	  }
-	}
-	*SavedNum = *SavedNum - 1;
-	fout2.close();
-        s.clear();
+	      *Fname = "";
+	      cout<<"Enter Player Name and Chapter (with space) to delete game."<<endl;;
+	      cin>>*Fn1>>*Fn2;
+	      *Fname = "Saved_Games/" + (*Fn1) + (*Fn2) + ".txt";
+	      if(!remove((*Fname).c_str())){
+          cout<<"Enter correct player name and chapter number."<<endl;
+	      }
+        else{
+  	      ofstream fout1("Saved_Games/Saved_Games_num.txt");
+          fout1<<(*SavedNum - 1);
+        	fout1.close();
+        	ofstream fout2("Saved_Games/Saved_Games.txt");
+        	for(int i = 0; i < *SavedNum; i++){
+        	  if(s[i] != (*Fn1 + *Fn2)){
+        	    fout2<<s[i]<<endl;
+        	  }
+        	}
+          *SavedNum = *SavedNum - 1;
+        	fout2.close();
+                s.clear();
         }
       }
       else{

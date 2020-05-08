@@ -23,8 +23,15 @@ bool Chap3(string *Pname, int *Phitp, int *Phealth, int *Psol){
       cout<<"You go close to the bear.\nThe bear attacks you.\n3 Health Points lost.\n";
       *Phealth = *Phealth - 3;
       if(*Phealth <= 0){
-        cout<<"GAME OVER\n";
-	exit(0);
+        delete Choice1;
+	      Choice1 = 0;
+	      delete ChoiceNum;
+	      ChoiceNum = 0;
+	      delete Lines;
+	      Lines = 0;
+	      delete ChapFiles;
+	      ChapFiles = 0;
+        return true;
       }
       cout<<"The bear 'apologises' to you saying that he thought you were the hunter who put him here.\n";
     }
@@ -48,30 +55,30 @@ bool Chap3(string *Pname, int *Phitp, int *Phealth, int *Psol){
       int *difficult = new int(10);
       if(Battle(Pname, Ename, Phealth, Phitp, Ehealth, Ehitp,difficult)){
         delete Choice1;
-	Choice1 = 0;
-	delete ChoiceNum;
-	ChoiceNum = 0;
-	delete Lines;
-	Lines = 0;
-	delete ChapFiles;
-	ChapFiles = 0;
-	return true;
+	      Choice1 = 0;
+	      delete ChoiceNum;
+	      ChoiceNum = 0;
+	      delete Lines;
+	      Lines = 0;
+	      delete ChapFiles;
+	      ChapFiles = 0;
+	      return true;
       }
       if(Fight(Psol, Esol)){
         delete Choice1;
-	Choice1 = 0;
-	delete ChoiceNum;
-	ChoiceNum = 0;
-	delete Lines;
-	Lines = 0;
-	delete ChapFiles;
-	ChapFiles = 0;
+        Choice1 = 0;
+      	delete ChoiceNum;
+      	ChoiceNum = 0;
+      	delete Lines;
+      	Lines = 0;
+      	delete ChapFiles;
+      	ChapFiles = 0;
         return true;
       }
     }
   }
   else{
-    cout<<"You go ahead, ignoring the sounds of the animal.\n";
+    cout<<"You go ahead, ignoring the sounds of the animal."<<endl;
   }
   return false;
 }

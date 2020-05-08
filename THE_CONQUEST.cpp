@@ -5,6 +5,7 @@
 #include "Chap1.h"
 #include "Chap2.h"
 #include "Chap3.h"
+#include "Chap4.h"
 #include "load_game.h"
 #include "save_game.h"
 #include "Fortune_cookie.h"
@@ -48,7 +49,7 @@ void load(string *Pna, int *Phit, int *Pheal, int *Sol, string *ChapNum){
 }
 
 void save(string *Pna, int *Pheal, int *Phit, int *Psol, string *ChapNum){
-  cout<<"Do you want to save the game?\nEnter 'Y' for yes or any other character for no.\n";
+  cout<<"Do you want to save the game?\nEnter 'Y' for yes or any other character for no."<<endl;
   char *c = new char('a');
   cin>>*c;
   if(*c == 'Y'){
@@ -131,7 +132,7 @@ int main(){
     save(Pname, Phitp , Phealth, Psol, ChapNum);
   }
   if(*ChapNum == "1"){
-    cout<<"\nChapter 1: THE FARMLANDS.\n\n";
+    cout<<"\nChapter 1: THE FARMLANDS.\n"<<endl;
     if(Chap1(Pname, Phitp, Phealth, Psol, ChoiceInChap1)){
       cout<<"Game Over"<<endl;
       Exit_Game(Pname, Phitp, Phealth, Psol, ChapNum);
@@ -139,7 +140,7 @@ int main(){
     *ChapNum = "2";
   }
   if(*ChapNum == "2"){
-    cout<<"\nChapter 2: THE ENCHANTED FOREST.\n\n";
+    cout<<"\nChapter 2: THE ENCHANTED FOREST.\n"<<endl;
     if(Chap2(Pname, Phitp, Phealth, Psol, ChoiceInChap1)){
       cout<<"Game Over"<<endl;
       Exit_Game(Pname, Phitp, Phealth, Psol, ChapNum);
@@ -160,7 +161,7 @@ int main(){
     }
   }
   if(*ChapNum == "3"){
-    cout<<"\nChapter 3: THE RIVER.\n\n";
+    cout<<"\nChapter 3: THE RIVER.\n"<<endl;
     if(Chap3(Pname, Phitp, Phealth, Psol)){
       cout<<"Game Over"<<endl;
       Exit_Game(Pname, Phitp, Phealth, Psol, ChapNum);
@@ -178,6 +179,16 @@ int main(){
       }
       delete y_n;
       y_n = 0;
+    }
+  }
+  if(*ChapNum == "4"){
+    cout<<"\nChapter 4: THE FINAL BATTLE.\n"<<endl;
+    if(Chap4(Pname, Phitp, Phealth, Psol)){
+      cout<<"Game Over"<<endl;
+      Exit_Game(Pname, Phitp, Phealth, Psol, ChapNum);
+    }
+    else{
+      Exit_Game(Pname, Phitp, Phealth, Psol, ChapNum);
     }
   }
 //  cout<<*Pname<<" "<<*Phitp<<" "<<*Phealth<<" "<<*Psol<<" "<<*ChoiceInChap1<<endl;
