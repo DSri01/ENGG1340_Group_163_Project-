@@ -182,51 +182,51 @@ If enemy soldiers > the player’s soldiers, GAME OVER.
 
 ## Chapter 1 “The Farmlands”:
 Evening, Player(You) finds himself/herself in a village injured. Then a nurse tells you where she found you. You suddenly remember everything about yourself. You tell the nurse who you are, Prince/Princess PlayerName. She asks you to drink a potion while she goes away to call the village head. You fell asleep and you dream. You see yourself standing in your room. Your father, the king of Astonia, is standing in front of you, when suddenly a sword comes piercing through his heart. He falls down and you see your uncle holding the blood-covered sword. You wake up panting and find yourself tied to the bed. The village head is standing next to you. He says that he is your evil uncle’s supporter and that he will be rewarded if he hands you to him. He goes out. You cut the rope with the dagger (2 HIT POINT for every hit) that is hidden in your arm. Growling heard outside, you walk out, and see the village head looking at the source of the noise.(MAX HEALTH: 5)\
--**Choice 1:** Either save the village head or go away.\
-      -***If save:*** find out what the beast is, choose from numbers 1-5(lion/cheetah/tiger/jaguar/leopard.). You pick up the shield and run   in front of the village head and defend him from the beasts’ claw. (MAIN CHARACTER FIGHT) (Max Health: 5, Hit Point: 1 Difficulty: 0 ) Completion rewards: +50 soldiers, new armour Max Health increases to 10, you get a sword (Hit point 4) + A safe route through the enchanted forest.\
-       -***Else:*** All player stats remain the same. Beast attacks you after killing the village head. (MAIN CHARACTER FIGHT) (Max Health: 5, Hit Point: 1 Difficulty: 0 ). Next day, you will be attacked by 50 of your uncle’s soldiers after you reach the Enchanted forest.\
+-**Choice 1:** Either save the village head or go away.
+      -***If save:*** find out what the beast is, choose from numbers 1-5(lion/cheetah/tiger/jaguar/leopard.). You pick up the shield and run   in front of the village head and defend him from the beasts’ claw. (MAIN CHARACTER FIGHT) (Max Health: 5, Hit Point: 1 Difficulty: 0 ) Completion rewards: +50 soldiers, new armour Max Health increases to 10, you get a sword (Hit point 4) + A safe route through the enchanted forest.
+       -***Else:*** All player stats remain the same. Beast attacks you after killing the village head. (MAIN CHARACTER FIGHT) (Max Health: 5, Hit Point: 1 Difficulty: 0 ). Next day, you will be attacked by 50 of your uncle’s soldiers after you reach the Enchanted forest.
 You go ahead. It’s morning time, you reach a hut by the river where you see an old woman is trying to fill a bucket and she collapses.
--**Choice 2:** Either help the lady or go away.\
-  -***If help lady:*** Completion rewards: Health replenish potion +1, a horse (equivalent to 10 soldiers) and option to go to search for the old woman’s son who did not come home since yesterday.\
-  -**Choice 2a:** Find son or not.\
-    -***If yes:*** go to find the man. You go deep into the woods. You find him tied by cannibals. You go near him, the cannibals are in a distance but they see you.\
-     -**Choice 2a1:** untie him or fight the cannibals yourself.\
-        -***If untie:*** Number of cannibals faced = 5 (MEN FIGHT 0 soldiers LOSS)\
-         -***Else:*** Number of cannibals faced =5(MEN FIGHT and soldiers killed (1-3)\
-     -***If no army*** then, killed and GAME OVER.\
-completion rewards: New ally Cameron. The man is an archer and commands 25 soldiers of his tribe Army strength +35.\
+-**Choice 2:** Either help the lady or go away.
+  -***If help lady:*** Completion rewards: Health replenish potion +1, a horse (equivalent to 10 soldiers) and option to go to search for the old woman’s son who did not come home since yesterday.
+  -**Choice 2a:** Find son or not.
+    -***If yes:*** go to find the man. You go deep into the woods. You find him tied by cannibals. You go near him, the cannibals are in a distance but they see you.
+     -**Choice 2a1:** untie him or fight the cannibals yourself.
+        -***If untie:*** Number of cannibals faced = 5 (MEN FIGHT 0 soldiers LOSS)
+         -***Else:*** Number of cannibals faced =5(MEN FIGHT and soldiers killed (1-3)
+     -***If no army*** then, killed and GAME OVER.
+completion rewards: New ally Cameron. The man is an archer and commands 25 soldiers of his tribe Army strength +35.
 -***Else:*** You go ahead.
 
 ## Chapter 2 “The Enchanted Forest”: 
-If you do not save the village head:, then fight 25 soldiers as your uncle has been told your position by the village people.\
-(Main Character fight: 1 man, 10-Heath point, 1-Hit point Difficulty: 20)(Soldiers fight 24) After the fight you try to figure out the way through the forest with the help of the map that fell from one of the soldier’s armour. \
-If you save the village head, You remember the safest path through the forest, the village head told you about. You see the path in front of you and go ahead.\
-You come face to face with a mysterious figure. Half like a woman, half like a tree. Choose how u are going to approach this creature:\
+If you do not save the village head:, then fight 25 soldiers as your uncle has been told your position by the village people.
+(Main Character fight: 1 man, 10-Heath point, 1-Hit point Difficulty: 20)(Soldiers fight 24) After the fight you try to figure out the way through the forest with the help of the map that fell from one of the soldier’s armour.
+If you save the village head, You remember the safest path through the forest, the village head told you about. You see the path in front of you and go ahead.
+You come face to face with a mysterious figure. Half like a woman, half like a tree. Choose how u are going to approach this creature:
 
-**Aggressively, fearfully, Politely but cautiously, indifferently and in an ignoring manner**...The creature attacks by sending its branches *(towards the sky and then downwards/ downwards and then upwards/sideways)*. ***Your choice: defend.*** You realise that you are not able to beat the creature so you try to escape but she is faster but then you spot a thin root-like structure going into the ground- moving with every move of the creature. You figure out that the root is somehow the source of her power so you take the dagger that you always keep hidden in your arm and cut the root off . \
-The creature dissolves into a thick dense fog all around you. But then you hear a voice thanking you for freeing the woman who had been trapped in that vicious form for an eternity. She wishes you good luck for your quest and rewards you with (A mystical sword HIT POINT: 6, 5 Mythical creature (bear/giants/Griffins), A new armour, Max health = 20) equivalent to 250 men) .You continue forward and soon you hear a man screaming with pain:\
--**Choice 3:** Find out who it is and why he is screaming.\
-   -***If yes,*** find out, you try to follow and find that person stuck inside a thick bushel with thorns piercing his entire body. Blood and and a thick green sap was oozing out of all the places the bush was touching. You try to help him but he warns you about the poisoned ivy bushes. \
-   -**Choice 3a:** Help him any way.\
-      -***If yes:*** You get hurt and lose health 1 HEALTH POINT LEFT (iF ONLY 1 HEALTH POINT THEN DIE) . The man is weak but he tells you about a very rare and sacred Baccara Rose Flower. He points towards the bushel and you spot a rose so dark-red that it almost looked black. You carefully reachout and pluck it. The man says to smell it because it has many mystery powers one of which is healing.You both take turns smelling it and the effect is instanuous HEALTH REPLENISH.  The man lets you keep the rose as a reward for saving his life and tells you an easy way out of the forest Rewards=+1 Health Replenish Potion.\
-      -***Else:*** You take his advice and ask for his forgiveness for not being able to help. The helpless man accepts it and tells you a way out of the forest. You go on while the man still screams with pain. But as you turned you get pierced but a thorn of the bush too 1 HEALTH POINT LOSS.\
-   -***Else:*** you ignore the man and wander around the forest being stung by bees the size of footballs and being poisoned by poison ivy and end up losing a lot of health 5 HEALTH POINTS. \
-You encounter 20 guards. (+25 if the village head was not saved)\
+**Aggressively, fearfully, Politely but cautiously, indifferently and in an ignoring manner**...The creature attacks by sending its branches *(towards the sky and then downwards/ downwards and then upwards/sideways)*. ***Your choice: defend.*** You realise that you are not able to beat the creature so you try to escape but she is faster but then you spot a thin root-like structure going into the ground- moving with every move of the creature. You figure out that the root is somehow the source of her power so you take the dagger that you always keep hidden in your arm and cut the root off .
+The creature dissolves into a thick dense fog all around you. But then you hear a voice thanking you for freeing the woman who had been trapped in that vicious form for an eternity. She wishes you good luck for your quest and rewards you with (A mystical sword HIT POINT: 6, 5 Mythical creature (bear/giants/Griffins), A new armour, Max health = 20) equivalent to 250 men) .You continue forward and soon you hear a man screaming with pain:
+-**Choice 3:** Find out who it is and why he is screaming.
+   -***If yes,*** find out, you try to follow and find that person stuck inside a thick bushel with thorns piercing his entire body. Blood and and a thick green sap was oozing out of all the places the bush was touching. You try to help him but he warns you about the poisoned ivy bushes.
+   -**Choice 3a:** Help him any way.
+      -***If yes:*** You get hurt and lose health 1 HEALTH POINT LEFT (iF ONLY 1 HEALTH POINT THEN DIE) . The man is weak but he tells you about a very rare and sacred Baccara Rose Flower. He points towards the bushel and you spot a rose so dark-red that it almost looked black. You carefully reachout and pluck it. The man says to smell it because it has many mystery powers one of which is healing.You both take turns smelling it and the effect is instanuous HEALTH REPLENISH.  The man lets you keep the rose as a reward for saving his life and tells you an easy way out of the forest Rewards=+1 Health Replenish Potion.
+      -***Else:*** You take his advice and ask for his forgiveness for not being able to help. The helpless man accepts it and tells you a way out of the forest. You go on while the man still screams with pain. But as you turned you get pierced but a thorn of the bush too 1 HEALTH POINT LOSS.
+   -***Else:*** you ignore the man and wander around the forest being stung by bees the size of footballs and being poisoned by poison ivy and end up losing a lot of health 5 HEALTH POINTS.
+You encounter 20 guards. (+25 if the village head was not saved)
 After your battle with the guards, you finally get out of the forest.
 
 ## Chapter 3 “Cave Behind the waterfall”: 
-As you come out of the enchanted forest, you hear the sound of a waterfall, you know that you are near a lake but you also hear a howling sound nearby. Looks like somebody/something is in pain. You know that the wild animals from the forest come to the river to drink water.\
--**Choice 4:** Follow the sound\
-   -***If yes:*** You see a bear which is stuck in one of the traps laid by the hunters. Choice 4a: you can approach this bear Aggressively, fearfully, Politely but cautiously, indifferently and in an ignoring manner\
-      -***If fearfully or Politely but cautiously:*** The bear talks. You are surprised. He asks you to free him.\
-      -***If Aggressively, indifferent and in an ignoring manner:*** The bear attacks 3HEALTH POINT loss, the bear apologises. You are surprised that he can talk. He asks you to free him\
--**Choice4b:** Free him or go away.\
-   -***If free:*** The bear asks you to give him a healing potion.\
-      -**Choice4c:** Give him a healing potion or lie that you don’t have it\
-         -***If yes:*** The bear heals and he joins your force with his sleuth. Rewards: 10 bears equivalent to 150 men\
-         -***If no:*** His family comes, everyone is crying, you feel shameful. The bear dies. You go away.\
-    -***If you do not free:*** The bear’s family comes and when they see you leaving the bear, they think that you have trapped him, you face a force of 10 bears, equivalent to 150 soldiers and the bear’s son (24 Heath Points) and 5 Hit points.(MAIN CHARACTER FIGHT) Difficulty: 15 (Soldiers FIGHT 150)\
-   -***Else:*** You move forward.\
+As you come out of the enchanted forest, you hear the sound of a waterfall, you know that you are near a lake but you also hear a howling sound nearby. Looks like somebody/something is in pain. You know that the wild animals from the forest come to the river to drink water.
+-**Choice 4:** Follow the sound
+   -***If yes:*** You see a bear which is stuck in one of the traps laid by the hunters. Choice 4a: you can approach this bear Aggressively, fearfully, Politely but cautiously, indifferently and in an ignoring manner
+      -***If fearfully or Politely but cautiously:*** The bear talks. You are surprised. He asks you to free him.
+      -***If Aggressively, indifferent and in an ignoring manner:*** The bear attacks 3HEALTH POINT loss, the bear apologises. You are surprised that he can talk. He asks you to free him
+-**Choice4b:** Free him or go away.
+   -***If free:*** The bear asks you to give him a healing potion.
+      -**Choice4c:** Give him a healing potion or lie that you don’t have it
+         -***If yes:*** The bear heals and he joins your force with his sleuth. Rewards: 10 bears equivalent to 150 men
+         -***If no:*** His family comes, everyone is crying, you feel shameful. The bear dies. You go away.
+    -***If you do not free:*** The bear’s family comes and when they see you leaving the bear, they think that you have trapped him, you face a force of 10 bears, equivalent to 150 soldiers and the bear’s son (24 Heath Points) and 5 Hit points.(MAIN CHARACTER FIGHT) Difficulty: 15 (Soldiers FIGHT 150)
+   -***Else:*** You move forward.
 
 
 Feeling tired from all that you have been through you decide to find a place to rest. You spot a cave behind the waterfall and decide to go there. You eat some fruits and try to catch some sleep. You awake to the sound of thunder and heavy rainfall. The rain is too heavy and it is nearly impossible to go out so you decide to wait a little longer. You spot some carvings on the walls of the cave and as you follow them you see that they lead deep inside the cave. You follow them and realize it goes deeper than you realized. You reach the end and find yourself amongst rocky mountains. 
