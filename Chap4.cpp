@@ -42,12 +42,13 @@ bool Chap4(string *Pname, int *Phitp, int *Phealth, int *Psol){
   Choice(Choice1, ChoiceNum);
   *ChapFiles = "Chapters/Chapter4c4.txt";
   *Lines = 12;
+  *Phitp = *Phitp - 2;
   PrintChapLines(ChapFiles, Lines);
   string *Ename = new string("Cyrus");
   int *Ehitp = new int(7);
   int *Ehealth = new int(25);
   int *Esol = new int(100);
-  int *difficult = new int(5);
+  int *difficult = new int(4);
   if(Battle(Pname, Ename, Phealth, Phitp, Ehealth, Ehitp,difficult)){
     delete Choice1;
     Choice1 = 0;
