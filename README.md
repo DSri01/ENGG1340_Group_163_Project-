@@ -3,53 +3,162 @@ Text based game for ENGG 1340 Group 163 Project.
 ## Game: The Conquest
   Group Number: 163
 ## Group Members:
-  Dhruv Srivastava (3035667792)\
-  Tamanna Singhal (3035664647)
+  Dhruv Srivastava (3035667792): DSri01
+  
+  Tamanna Singhal (3035664647): tamannasinghal
 
 ## Game Description
 The Conquest is a **role-playing** game in which players can make various choices that affect the storyline in various ways.
-The player is provided with different choices at different stages throughout the storyline and are given points 
-(Health Points/Hit Points/Soldiers) based on the outcome of his/her choice. 
+
+The player is provided with different choices at different stages throughout the storyline and are given points (Health Points/Hit Points/Soldiers) based on the outcome of his/her choice.
+
 The points accumulated are used in battles and quests as the game progresses.
 
-## Coding requirements:
-### The Random Elements:
-The player is provided a random fortune cookie in the beginning of the game, with lucky color and lucky number for the day.\
-During the battles where soldiers fight, the loss of strength is calculated randomly (4% - 10% of the total number).\
-During some main character battles, where the strength of the opponent is random.\
-There are other random elements as well which will be described later in this document.
+## Instruction to play
 
-### Data structures for storing game status:
+**Step 1: Create the executable Game file** 
+
+The game is played by first entering command "make Game", which creates an executable file "Game".
+
+*Note:* You can use "make clean" command to remove all .o files
+
+**Step 2: Run the executable file**
+
+Run the executable file Game by the command "./Game"
+
+**Step 3: Enjoy**
+Just simply follow the game instructions that will be presented to you one by one when you start playing, for example, Enter s to continue, Enter your choice 1, 2 or 3, etc.
+
+For Character Battles: enter left, right, above, or below as your moves to fight. 
+
+**For exiting game:** Exit when asked after completion of Chapters or intentionally lose the game (Your progress will not be stored if you lose).
+
+***Warning:*** Please enter as the characters as the game says as it is case sensitive.
+
+
+## Coding requirements:
+### 1 The Random Elements:
+The player is provided a random fortune cookie in the beginning of the game, with lucky color and lucky number for the day.
+
+During the battles where soldiers fight, the loss of strength is calculated randomly (4% - 10% of the total number).
+
+During some main character battles, where the strength of the opponent is random.
+
+The moves of enemy in the character battles are random.
+
+The following functions have random elements:
+
+**Battle:** The moves of enemy are random
+
+**Fight:** The number of casualties is random
+
+**Fortune_cookie:** The sentence, colour and lucky number are random.
+There are other random elements as well in between some chapters, like strengh of enemy soldiers.
+
+### 2 Data structures for storing game status:
 Game status is saved at various levels of progress throughout the game.
 
-### Dynamic memory management:
-There is a frequent use of variables throughout the game which are dynamic, for instance,  the health points and the hit points etc.
+Dynamic variables are passed through different functions. These dynamic variables store all the game status and they are deleted once they are not needed.
 
-### File Input/Output:
+The values of some dynamic variables is also stored in different .txt files for loading the game later.
+
+### 3 Dynamic memory management:
+The player status throughout the game is stored in dynamic variables, which are deleted when the game is exited or when the function is ended.
+
+Nearly all functions use dynamic variables for nearly all the tasks, which are deleted when the variables are not needed anymore.
+
+The pointers of these dynamic variables are passed to different functions where changes are made in them and they are deleted once they are not needed anymore.
+
+Delete_game() function uses vector.
+
+### 4 File Input/Output:
 The game extensively uses file input/output to print the story and to save game status.
 
-### Program codes in multiple files:
-The storylines are stored in various text files. \
-Moreover, there are a lot of functions (and their respective header files) defined in separate files,
-for instance, files for different chapters and the fortune cookie function etc.
+The following functions use File I/O:
 
-### Proper indentation and naming styles:
-The program uses legible and easy to understand coding indentation. \
-The variables used are named so as to increase comprehension but are not so long as to lose ease of readability.
+**load and load_game:** To load game from a .txt file in Saved_Games directory
 
-### In-code documentation:
-Most of the commits made are accompanied by appropriate messages.\ 
+**save and save_game:** To save game status in a .txt file in Saved_Games directory
+
+**Delete_game:** To delete previously saved games in Saved_Games directory
+
+**PrintChapLines:** To print storyline for all chapter functions from Chapters directory
+
+**Fortune_cookie:** To print the random sentence and colour from a .txt file in Chapters directory
+
+### 5 Program codes in multiple files:
+Nearly all the functions are defined in different cpp and header files like:
+Battle.cpp, Battle.h, Fight.cpp, Fight.h, Delete_game.cpp, Fortune_cookie.cpp, PrintChapLines.cpp, load_game.cpp, save_game.cpp, etc.
+
+The storylines are stored in various text files.
+
+The Game is implemented using all the functions being called from one another, for instance, the main function calls the Chap1 function which in turns, calls Battle, Fight, PrintChapLines functions.
+
+### 6 Proper indentation and naming styles:
+The program uses legible and easy to understand coding indentation.
+
+The variables used are named so as to increase comprehension but are not so long as to lose ease of readability, example: Pname for Player Name.
+
+### 7 In-code documentation:
+Most of the commits made are accompanied by appropriate messages.
+
 The functions too contain comments to make the code easier to understand.
 
+## Description of functions:
+### Battle
+This function is used for character battles. It returns true if player loses and false if player wins.
+
+The moves of the enemy are **random**
+
+It uses Dynamic variables for processing inputs and outputs.
+
+### Fight
+This function is used for army battles. It returns true if player loses and false if player wins.
+
+The number of casualities is **random**.
+
+It uses Dynamic variables for processing inputs and outputs.
+
+### Fortune_cookie
+This function prints a **random** fortune cookie(lucky numbers, colour and sentences).
+
+It also uses **File I/O** to print a **random** sentence and colour from a .txt file in Chapters directory
+
+It uses Dynamic variables for processing inputs and outputs.
+
+### PrintChapLines
+This function uses **File I/O** to print the story for all chapters from different .txt files in Chapters directory
+
+It uses Dynamic variables for processing inputs and outputs.
+
+### load_game, Delete_game, and save_game
+These functions use **File I/O** to load or delete a previously stored game or save a new game in .txt files in Saved_Games directory
+
+They use the number stored in Saved_Games_num.txt file and list stored in Saved_Games.txt to achieve their goal.
+
+Delete_game also uses vectors to store the list of previously saved games.
+
+They use Dynamic variables for processing inputs and outputs.
+
+### Choice
+This function uses sstream to record the choice of player and ensures that it is within the number of possible inputs.
+
+It uses Dynamic variables for processing inputs and outputs.
+
+### Chap1, Chap2, Chap3, and Chap4
+These functions use if-else, nested if and if-else-if statements to implement the chapters.
+
+They also call functions like Battle, Fight, PrintChapLines, and Choice for implementing the game
+
+They use Dynamic variables for processing inputs and outputs.
 
 ## Main Storyline:
 **Legeng(key):**
--**(MAIN Character fight):** The main character will fight the enemy (with the statistics of the enemy being displayed). The enemy will use random moves to fight with the main character.\
--**Difficulty level** specifies the number of moves after which the enemy can break your block or block your move.\
--**(Soldiers fight)**: Only the soldiers fight with the enemy’s army strength displayed next. Loss of soldiers will be calculated randomly.\
+-**(MAIN Character fight):** The main character will fight the enemy (with the statistics of the enemy being displayed). The enemy will use random moves to fight with the main character.
+-**Difficulty level** specifies the number of moves after which the enemy can break your block or block your move.
+-**(Soldiers fight)**: Only the soldiers fight with the enemy’s army strength displayed next. Loss of soldiers will be calculated randomly.
 If enemy soldiers > the player’s soldiers, GAME OVER.
-
-
+**Please note:** There might be slight differences between the storyline below and the actual storyline in the game.
 ## Chapter 1 “The Farmlands”:
 Evening, Player(You) finds himself/herself in a village injured. Then a nurse tells you where she found you. You suddenly remember everything about yourself. You tell the nurse who you are, Prince/Princess PlayerName. She asks you to drink a potion while she goes away to call the village head. You fell asleep and you dream. You see yourself standing in your room. Your father, the king of Astonia, is standing in front of you, when suddenly a sword comes piercing through his heart. He falls down and you see your uncle holding the blood-covered sword. You wake up panting and find yourself tied to the bed. The village head is standing next to you. He says that he is your evil uncle’s supporter and that he will be rewarded if he hands you to him. He goes out. You cut the rope with the dagger (2 HIT POINT for every hit) that is hidden in your arm. Growling heard outside, you walk out, and see the village head looking at the source of the noise.(MAX HEALTH: 5) (Checkpoint 1 save)\
 -**Choice 1:** Either save the village head or go away.\
@@ -101,61 +210,37 @@ As you come out of the enchanted forest, you hear the sound of a waterfall, you 
 
 Feeling tired from all that you have been through you decide to find a place to rest. You spot a cave behind the waterfall and decide to go there. You eat some fruits and try to catch some sleep. You awake to the sound of thunder and heavy rainfall. The rain is too heavy and it is nearly impossible to go out so you decide to wait a little longer. You spot some carvings on the walls of the cave and as you follow them you see that they lead deep inside the cave. You follow them and realize it goes deeper than you realized. You reach the end and find yourself amongst rocky mountains. 
 
-## Chapter 4:
-“Mountains”: The height you are at is high above a valley but when you look up, the peak is higher above still. The rain now is a drizzle and you spot a river down in the valley...You decide to go down and go along the river because you know that it will lead to your kingdom. You start to descend but it seems harder with the rocks slippery from the rain. You have to stop on top of a rock and figure out a better way. Choose * points according to choice(use the roots, use your weapons to stick into the crevices, wait for the rain to stop completely etc. if Dhruv u can think of something else). Finally you manage to reach down to the river bank and as you walk besides it you start to notice signs of some civilization. Which is odd Because no one knew that people lived here\
-
--**Choice5:** Find Out about the civilization \
-   -***If yes:*** you carefully approach one of the huts and tentatively knock an old man appears. Seeing your condition he lets you in. You ask the man and his family about how all the people live here and why does no one know about it. They tell That they had been wrongly accused by the king’s brother Cyrus and banished from their village so they ended up here.\ 
-   -**Choice 5a:** Reveal your identity:\
-      -***IF NO:*** Taking a lesson from the last time in a village you don't reveal your identity. You sympathise with them and lie that you are an explorer but got stuck in the mountains due to the rain. They provide You with some food, dry clothes and apply some salve on your cuts and you give them the sacred baccara rose as a thankyou\
-      _***IF YES:*** Reveal your identity. They feel betrayed but as you continue your story they understand you. They provide You with some food, dry clothes and apply some salve on your cuts and tell you that their entire village will support you when you need it +100 Soldiers. You give them the sacred baccara rose as a thankyou. \
-   -***Else:*** You hide amongst the trees and keep moving along the river.\
-  As you continue through the mountains it dawns on you that soon you will have to face the man who murdered your entire family. You will have to face many dangers and even if you do succeed running a kingdom is not an easy job. You will have responsibilities and will have to make tough choices and there will be enemies watching your every move waiting to strike at the most opportune moment.\
+## Chapter 4 "THE FINAL BATTLE":
+You have reached the farmlands surrounding the castle.
+Everyone seems to be surprised to see you.
+Until now, your uncle had kept the citizens under the impression that some assassins came into the castle and killed you and your father.
+You keep going forward.
+You are close to a hut when suddenly an army captain comes running towards you.
+The man is armed, but he is running towards you alone, with no troops in sight.
+will you: take a defensive stance, disarm him or kill him?
+Turns out that he was an ally and he has 300 - 400 men under his command.
+**If you kill him:** you will lose the chance to get these soldiers
   
--**Choice6:** quit your quest and live with the villagers:\
-   -***If yes:*** (lose points)you turn back and order your troops to head back to that secret village. But as you do, you realize that the people you are heading back to had been wrongfully banished. You think about how many people would be treated wrongly if your uncle remains on the throne. You resolve to get the throne back and to take care of your people. Seeing your inability to commit to your goal, some soldiers doubt your leadership and they leave you (-20 to 30 soldiers)\
-   -***Else:*** You push these thoughts aside and focus on getting the throne back from your malicious uncle and do right by your people.
-
-## Chapter 5 “The Final Battle”:
-You can now see the kingdom, the walls, the palace, and your people. Suddenly a man wearing the uniform of an army captain comes running towards you but he is not carrying a weapon.\
--**Choice7:** Attack the coming man, take a defensive stance, or do nothing.\
-   -***If you attack the coming man:*** The man stops a foot away from you. You now know that he didn’t mean to attack but now it’s too late to stop your arm. You stab him in his right lung. The man is shocked, he falls. You take him in your arms. “He says that your uncle knows that you are coming. He has prepared an army, but a part of your uncle’s army wants to be on your side and that he was here to warn you and tell you the good news. The army is going”… The man closes his eyes and dies in your arms.\
-   -***If you choose other two options:*** The man stops a foot away from you. You know that he isn’t there to attack you and looks happy to see you (The dialogue in green, continued) to stand on your uncle’s side but as soon as a signal is made, it will start attacking the people on your uncle’s side and that the man will be happy to command them. Also, the soldiers will be wearing a blue cloth around their neck .” The man goes back.\
-   
-You move forward. You see an army of 100 guards in distance. You command your forces to go ahead. (Soldiers Fight)
-The gates are closed. Suddenly a man appears on the walls. He says that you still have time to surrender. You can save many lives that are going to be lost if you go forward.
--**Choice8:** Give up\
-   -***If yes:*** You give up and you surrender, your army is disbanded and they go back. You are presented in your uncle’s court where you are given a death sentence by beheading.\
-   
-   ***GAME OVER--------------------------------------------------------------------------------------------------***\
-   
-   -***Else:*** You say that you will not surrender and you will be here tomorrow to fight. Your army forms a temporary shelter near the trees, away from the walls. You are anxious about tomorrow’s fight. Dawn, and a final count of your army is completed, you have (depends on choices made ) soldiers.\
-   
-Morning time, you and your army are ready to fight. Horns are sounded and your army charges. You come face to face with General Darius, who has come with the army of 325 men.
-(MAIN CHARACTER FIGHT) Difficulty: 10 Health point: 35, Hit point: 6\
-You defeat Darius. He is on his knees. He apologises and begs you to spare his life. He says that he is just serving the throne. He was loyal to your father, but he couldn’t save him or your family when your uncle attacked them in the darkness of the night. He says that he will always remain loyal to you, till his death.\
-
--**Choice9:** Forgive the general.\
-   -***If yes:*** You leave him and he commands his soldiers to join your side. You get Darius’s soldiers - (20-30%) You have lost (3-8%) of your original army. Suddenly an arrow pierces Darius’s chest. You are shocked, you take him in your arms. He dies instantaneously. You see that a man is pointing a crossbow towards you. You recognise him, He is your cousin. \
-   -***Else:***  You kill the general. Your soldiers keep fighting. Suddenly an arrow pierces your shoulder(lose 10 Health point and 1 hit point). You see that a man is pointing a crossbow towards you. You recognise him, He is your cousin. Your army kills the last man in Darius’s army and stands in formation. You have an army strength of you have lost (10-15%) of your army.\
-   
-Your cousin (Difficulty: 7 Health point: 45, Hit point: 8) shouts: charge and about 400 soldiers attack from the bushes and 80 soldiers come out from the gates with Darius’s son leading the army. You charge towards your cousin.Darius’s son comes in front of you.\
-
--***If saved general:*** He says that you didn’t kill his father and that he pledges his allegiance to you. He takes out his crossbow and starts attacking your cousin. Your cousin is hit (3-7) times losing (3-4) health points and (1) hit point with each hit. He shouts his army will follow your orders (+200 MEN) and that your cousin is all yours now. You charge towards him.\
--***Else:*** He says that the fact that Darius was fighting you was because he was loyal to the throne but as soon as you defeated him, the fight had become the fight for the throne rather than a threat to the safety of the kingdom and that he would have stopped fighting you after you had spared him his life. He puts up his crossbow and shoots at you. You defend, but as soon as you put down your shield, another arrow hits you in the other shoulder (1) Hit point loss (1-3) Health loss. He shouts to your cousin that you are all his.
-You charge towards your cousin.\
-(MAIN Character fight)\
-You finally kill your cousin.\
-(MEN fight)\
-You finally see your uncle coming out of the gates. You are red with anger. You remember how he stabbed your father in front of your eyes.\
-His army of  800 soldiers comes out of the gates and the gates are shut. You and your uncle charge towards each other, followed by your armies.\
-(***If you didn’t kill the captain:*** You shoot a burning arrow in the sky, your uncle’s army breaks in two sides having equal soldiers and your uncle’s soldiers now faces their enemies from two fronts uncle’s soldiers - 50%, your soldiers += 50% of uncle’s soldiers)
-You fight your uncle.(Difficulty: 2 Health Point: 50. Special ability block break after every 2-6 moves Hit point: 10, 1 if block break)
-(MEN fight)\
-Your uncle is on his back, bleeding. You can either save his life and put him in jail for the rest of his life or kill him instantly.\
-
--**Choice10:** Put your uncle in jail or kill him instantly.\
-   -***If jail:*** You call the army doctor and ask him to save your uncle’s life. He applies bandages and medicine and bandages on his wounds. You ask the doctor to send him to jail. You get back your kingdom. Your friends are around you when you sit on the throne and wear the crown. Your uncle is in jail now, recovering. You nullify all his cruel orders he gave as a king.\
-   -***Else:*** You thrust your sword into your uncle’s chest one last time to kill him. You get back your kingdom. Your friends are around you when you sit on the throne and wear the crown. You nullify all his cruel orders he gave as a king.\
+You go forward.
+You see the gates and you see your uncle and your cousin leading that army.
+You ask your uncle to surrender but he refuses.
+...
+Battle horns are played and both the armies rush towards one another.
+You notice that the first wave of the army is moving in an triangular formation.
+**Choose a formation**
+As the forces come closer, you see that they were civilians whose hands were tied with a stick and ordered to run towards you and your army.
+You order your soldiers to stop attacking them.
+You free them and you see that an army of about 550 soldiers is coming closer as you move civilians away from the battlefield.
+As soon as the last civilian is removed from the battlefield, you order your soldiers to charge.
+...
+Suddenly you hear something...
+...
+Before you know, a cannonball falls close to you and you fell on the ground.
+You can't hear anything as you watch a flock of birds flying in the sky.
+You get up and see that all your soldiers are fighting and you see your uncle charging towards you.
+He hits you with an arrow.(1 Hit Point Lost).
+You try to maintain your stance but he hits you again with an arroww. (1 Hit Point Lost)
+**MAIN CHARACTER FIGHT**
+**Army Fights against 150 soldiers**
 **“Player name” you have won the game.**
 
