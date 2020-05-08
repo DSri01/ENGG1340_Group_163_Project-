@@ -27,13 +27,14 @@ The game is played by first entering command "make Game", which creates an execu
 Run the executable file Game by the command "./Game"
 
 **Step 3: Enjoy**
+
 Just simply follow the game instructions that will be presented to you one by one when you start playing, for example, Enter s to continue, Enter your choice 1, 2 or 3, etc.
 
 For Character Battles: enter left, right, above, or below as your moves to fight. 
 
 **For exiting game:** Exit when asked after completion of Chapters or intentionally lose the game (Your progress will not be stored if you lose).
 
-***Warning:*** Please enter as the characters as the game says as it is case sensitive.
+***Warning:*** Please enter as the characters as the game says as it is case sensitive. For example, when the game says enter 'Y' to do something please enter 'Y' only.
 
 
 ## Coding requirements:
@@ -48,9 +49,15 @@ The moves of enemy in the character battles are random.
 
 The following functions have random elements:
 
-**Battle:** The moves of enemy are random
+**Battle:**
 
-**Fight:** The number of casualties is random
+The moves of enemy are random.
+
+**Fight:**
+
+The number of casualties is random.
+
+Also, the function uses mercnum variable.
 
 **Fortune_cookie:** The sentence, colour and lucky number are random.
 There are other random elements as well in between some chapters, like strengh of enemy soldiers.
@@ -76,28 +83,38 @@ The game extensively uses file input/output to print the story and to save game 
 
 The following functions use File I/O:
 
-**load and load_game:** To load game from a .txt file in Saved_Games directory
+**load and load_game:** To load game from a .txt file in Saved_Games directory.
 
-**save and save_game:** To save game status in a .txt file in Saved_Games directory
+**save and save_game:** To save game status in a .txt file in Saved_Games directory.
 
-**Delete_game:** To delete previously saved games in Saved_Games directory
+**Delete_game:** To delete previously saved games in Saved_Games directory.
 
-**PrintChapLines:** To print storyline for all chapter functions from Chapters directory
+**PrintChapLines:** To print storyline for all chapter functions from Chapters directory.
 
-**Fortune_cookie:** To print the random sentence and colour from a .txt file in Chapters directory
+**Fortune_cookie:** To print the random sentence and colour from a .txt file in Chapters directory.
 
 ### 5 Program codes in multiple files:
 Nearly all the functions are defined in different cpp and header files like:
 Battle.cpp, Battle.h, Fight.cpp, Fight.h, Delete_game.cpp, Fortune_cookie.cpp, PrintChapLines.cpp, load_game.cpp, save_game.cpp, etc.
 
-The storylines are stored in various text files.
+The storylines are stored in various text files within Chapters.
 
 The Game is implemented using all the functions being called from one another, for instance, the main function calls the Chap1 function which in turns, calls Battle, Fight, PrintChapLines functions.
 
 ### 6 Proper indentation and naming styles:
 The program uses legible and easy to understand coding indentation.
 
-The variables used are named so as to increase comprehension but are not so long as to lose ease of readability, example: Pname for Player Name.
+The variables used are named so as to increase comprehension but are not so long as to lose ease of readability.
+
+Example:
+
+Pname for Player Name.
+
+Phitp for Player Hit Points.
+
+Pheal for Player Health Points.
+
+Psol for Number of soldiers in Player's army.
 
 ### 7 In-code documentation:
 Most of the commits made are accompanied by appropriate messages.
@@ -105,33 +122,33 @@ Most of the commits made are accompanied by appropriate messages.
 The functions too contain comments to make the code easier to understand.
 
 ## Description of functions:
-### Battle
+#### Battle
 This function is used for character battles. It returns true if player loses and false if player wins.
 
 The moves of the enemy are **random**
 
 It uses Dynamic variables for processing inputs and outputs.
 
-### Fight
+#### Fight
 This function is used for army battles. It returns true if player loses and false if player wins.
 
 The number of casualities is **random**.
 
 It uses Dynamic variables for processing inputs and outputs.
 
-### Fortune_cookie
+#### Fortune_cookie
 This function prints a **random** fortune cookie(lucky numbers, colour and sentences).
 
 It also uses **File I/O** to print a **random** sentence and colour from a .txt file in Chapters directory
 
 It uses Dynamic variables for processing inputs and outputs.
 
-### PrintChapLines
+#### PrintChapLines
 This function uses **File I/O** to print the story for all chapters from different .txt files in Chapters directory
 
 It uses Dynamic variables for processing inputs and outputs.
 
-### load_game, Delete_game, and save_game
+#### load_game, Delete_game, and save_game
 These functions use **File I/O** to load or delete a previously stored game or save a new game in .txt files in Saved_Games directory
 
 They use the number stored in Saved_Games_num.txt file and list stored in Saved_Games.txt to achieve their goal.
@@ -140,12 +157,12 @@ Delete_game also uses vectors to store the list of previously saved games.
 
 They use Dynamic variables for processing inputs and outputs.
 
-### Choice
+#### Choice
 This function uses sstream to record the choice of player and ensures that it is within the number of possible inputs.
 
 It uses Dynamic variables for processing inputs and outputs.
 
-### Chap1, Chap2, Chap3, and Chap4
+#### Chap1, Chap2, Chap3, and Chap4
 These functions use if-else, nested if and if-else-if statements to implement the chapters.
 
 They also call functions like Battle, Fight, PrintChapLines, and Choice for implementing the game
@@ -155,12 +172,16 @@ They use Dynamic variables for processing inputs and outputs.
 ## Main Storyline:
 **Legeng(key):**
 -**(MAIN Character fight):** The main character will fight the enemy (with the statistics of the enemy being displayed). The enemy will use random moves to fight with the main character.
+
 -**Difficulty level** specifies the number of moves after which the enemy can break your block or block your move.
+
 -**(Soldiers fight)**: Only the soldiers fight with the enemy’s army strength displayed next. Loss of soldiers will be calculated randomly.
 If enemy soldiers > the player’s soldiers, GAME OVER.
-**Please note:** There might be slight differences between the storyline below and the actual storyline in the game.
+
+***Please note:*** There might be slight differences between the storyline below and the actual storyline in the game.
+
 ## Chapter 1 “The Farmlands”:
-Evening, Player(You) finds himself/herself in a village injured. Then a nurse tells you where she found you. You suddenly remember everything about yourself. You tell the nurse who you are, Prince/Princess PlayerName. She asks you to drink a potion while she goes away to call the village head. You fell asleep and you dream. You see yourself standing in your room. Your father, the king of Astonia, is standing in front of you, when suddenly a sword comes piercing through his heart. He falls down and you see your uncle holding the blood-covered sword. You wake up panting and find yourself tied to the bed. The village head is standing next to you. He says that he is your evil uncle’s supporter and that he will be rewarded if he hands you to him. He goes out. You cut the rope with the dagger (2 HIT POINT for every hit) that is hidden in your arm. Growling heard outside, you walk out, and see the village head looking at the source of the noise.(MAX HEALTH: 5) (Checkpoint 1 save)\
+Evening, Player(You) finds himself/herself in a village injured. Then a nurse tells you where she found you. You suddenly remember everything about yourself. You tell the nurse who you are, Prince/Princess PlayerName. She asks you to drink a potion while she goes away to call the village head. You fell asleep and you dream. You see yourself standing in your room. Your father, the king of Astonia, is standing in front of you, when suddenly a sword comes piercing through his heart. He falls down and you see your uncle holding the blood-covered sword. You wake up panting and find yourself tied to the bed. The village head is standing next to you. He says that he is your evil uncle’s supporter and that he will be rewarded if he hands you to him. He goes out. You cut the rope with the dagger (2 HIT POINT for every hit) that is hidden in your arm. Growling heard outside, you walk out, and see the village head looking at the source of the noise.(MAX HEALTH: 5)\
 -**Choice 1:** Either save the village head or go away.\
       -***If save:*** find out what the beast is, choose from numbers 1-5(lion/cheetah/tiger/jaguar/leopard.). You pick up the shield and run   in front of the village head and defend him from the beasts’ claw. (MAIN CHARACTER FIGHT) (Max Health: 5, Hit Point: 1 Difficulty: 0 ) Completion rewards: +50 soldiers, new armour Max Health increases to 10, you get a sword (Hit point 4) + A safe route through the enchanted forest.\
        -***Else:*** All player stats remain the same. Beast attacks you after killing the village head. (MAIN CHARACTER FIGHT) (Max Health: 5, Hit Point: 1 Difficulty: 0 ). Next day, you will be attacked by 50 of your uncle’s soldiers after you reach the Enchanted forest.\
@@ -240,7 +261,7 @@ You can't hear anything as you watch a flock of birds flying in the sky.
 You get up and see that all your soldiers are fighting and you see your uncle charging towards you.
 He hits you with an arrow.(1 Hit Point Lost).
 You try to maintain your stance but he hits you again with an arroww. (1 Hit Point Lost)
-**MAIN CHARACTER FIGHT**
+**MAIN CHARACTER FIGHT** Enemy Cyrus
 **Army Fights against 150 soldiers**
 **“Player name” you have won the game.**
 
