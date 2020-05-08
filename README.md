@@ -233,14 +233,25 @@ Feeling tired from all that you have been through you decide to find a place to 
 
 ## Chapter 4 "THE FINAL BATTLE":
 You have reached the farmlands surrounding the castle.
+
 Everyone seems to be surprised to see you.
 Until now, your uncle had kept the citizens under the impression that some assassins came into the castle and killed you and your father.
+
 You keep going forward.
+
 You are close to a hut when suddenly an army captain comes running towards you.
 The man is armed, but he is running towards you alone, with no troops in sight.
 will you: take a defensive stance, disarm him or kill him?
-Turns out that he was an ally and he has 300 - 400 men under his command.
-**If you kill him:** you will lose the chance to get these soldiers
+
+**If Defensive stance or disarm:** Turns out that he was an ally and he has 300 - 400 men under his command.
+
+He offers you help. Will you take it?
+
+-**if yes:** You get 300-400 soldiers calculated **randomly**.
+
+-**else:** You refuse the offer.
+
+**If you kill him:** you will lose the chance to get 300-400 soldiers
   
 You go forward.
 You see the gates and you see your uncle and your cousin leading that army.
@@ -248,20 +259,31 @@ You ask your uncle to surrender but he refuses.
 ...
 Battle horns are played and both the armies rush towards one another.
 You notice that the first wave of the army is moving in an triangular formation.
+
 **Choose a formation**
+
 As the forces come closer, you see that they were civilians whose hands were tied with a stick and ordered to run towards you and your army.
+
 You order your soldiers to stop attacking them.
 You free them and you see that an army of about 550 soldiers is coming closer as you move civilians away from the battlefield.
 As soon as the last civilian is removed from the battlefield, you order your soldiers to charge.
+
 ...
 Suddenly you hear something...
+
 ...
+
 Before you know, a cannonball falls close to you and you fell on the ground.
 You can't hear anything as you watch a flock of birds flying in the sky.
 You get up and see that all your soldiers are fighting and you see your uncle charging towards you.
-He hits you with an arrow.(1 Hit Point Lost).
-You try to maintain your stance but he hits you again with an arroww. (1 Hit Point Lost)
-**MAIN CHARACTER FIGHT** Enemy Cyrus
-**Army Fights against 150 soldiers**
-**“Player name” you have won the game.**
 
+He hits you with an arrow.(1 Hit Point Lost).
+
+You try to maintain your stance but he hits you again with an arroww. (1 Hit Point Lost)
+
+**MAIN CHARACTER FIGHT** Enemy Cyrus
+
+**Army Fights against 150 soldiers**
+
+If player wins the above two battles:
+**“Player name” you have won the game.**
