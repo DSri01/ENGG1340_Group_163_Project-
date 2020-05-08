@@ -35,3 +35,6 @@ save_game.o: save_game.cpp save_game.h
 	g++ $(FLAGS) -c $<
 Delete_game.o: Delete_game.cpp Delete_game.h
 	g++ $(FLAGS) -c $<
+clean:
+	rm -f *.o
+.PHONY: clean
