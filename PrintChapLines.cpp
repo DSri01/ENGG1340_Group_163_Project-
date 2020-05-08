@@ -4,7 +4,7 @@
 #include "PrintChapLines.h"
 using namespace std;
 
-void PrintChapLines(string *FileName, int *Lines){
+void PrintChapLines(string *FileName, int *Lines){//THis function prints the Chapter storyline in different .txt files with help of file I/O.THe file name is given as input along with the number of lines to be printed
   ifstream fin((*FileName).c_str());
   string *f = new string("");
   string *s = new string("");
@@ -14,7 +14,7 @@ void PrintChapLines(string *FileName, int *Lines){
     *Lines = *Lines - 1;
     cout<<endl;
     while(true){
-      cout<<"Enter s to continue"<<endl;;
+      cout<<"Enter s to continue"<<endl;//The function will print the next line only if s is entered
       cin>>*s;
       if((*s) == "s"){
         break;

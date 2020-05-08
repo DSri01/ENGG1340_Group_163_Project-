@@ -4,12 +4,12 @@
 #include "load_game.h"
 using namespace std;
 
-void load_game(string *Pname, int *Phealth, int *Phitp, int *Psol, string *ChapNum){
+void load_game(string *Pname, int *Phealth, int *Phitp, int *Psol, string *ChapNum){//This function loads the game status stored before using save_game() function with the help of File I/O
   string *FileName1 = new string("");
   string *FileName2 = new string("");
   string *FName = new string("");
   while(true){
-    cout<<"Enter Player Name and Chapter (with space) to load game."<<endl;
+    cout<<"Enter Player Name and Chapter (with space) to load game."<<endl;//Files are stored as txt files with name as player name followed by the Chapter number
     cin>>*FileName1>>*FileName2;
     *FName = "Saved_Games/" + (*FileName1) + (*FileName2) + ".txt";
     ifstream fin((*FName).c_str());
@@ -24,7 +24,7 @@ void load_game(string *Pname, int *Phealth, int *Phitp, int *Psol, string *ChapN
       break;
     }
   }
-  cout<<"Player Name: "<<*Pname<<endl;
+  cout<<"Player Name: "<<*Pname<<endl;//inputting game status from the file
   cout<<"Player Health: "<<*Phealth<<endl;
   cout<<"Player Hit Points: "<<*Phitp<<endl;
   cout<<"Player Soldiers: "<<*Psol<<endl;

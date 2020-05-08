@@ -4,7 +4,7 @@
 #include "Choice.h"
 using namespace std;
 
-void Choice(int *Choice, int *num){
+void Choice(int *Choice, int *num){//function to input the choice number inputted by the user and making sure that it is within the number of choices available
   int choicearr[6] = {1, 2, 3, 4, 5, 6};
   string *Cselect = new string("");
   int *check =new int(-1);

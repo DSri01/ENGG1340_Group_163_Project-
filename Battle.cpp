@@ -4,19 +4,19 @@
 #include "Battle.h"
 using namespace std;
 
-bool Battle(string *Pname, string *Ename, int *Phealth, int *Phitp, int *Ehealth, int *Ehitp, int *difficult){
+bool Battle(string *Pname, string *Ename, int *Phealth, int *Phitp, int *Ehealth, int *Ehitp, int *difficult){//Fuction to implement fight between to characters. The function returns true if player loses the fight
   string att_moves[5] = {"strikes from above", "strikes from below", "strikes from left", "strikes from right", "performs block break"};
   string def_moves[5] = {"defends above", "defends below", "defends left", "defends right", "performs complete block"};
   int *diffcount = new int(0);
   int *mvcount = new int(0);
-  int *move_type = new int(0);
+  int *move_type = new int(0);//move_type stores the type of move by the enemy
   string *Pmove = new string("");
   cout<<"Battle begins"<<endl;
   while(true){
-    srand(time(NULL));
+    srand(time(NULL));//The moves of the enemy is selected randomly
     *Pmove = "";
     cout<<endl;
-    if(*diffcount != *difficult){
+    if(*diffcount != *difficult){//pointer difficult is used to determine when the next block break or complete block is going to happen by chekcing the value of diffcount
       *diffcount = *diffcount + 1;
       *move_type = rand() % 4;
     }

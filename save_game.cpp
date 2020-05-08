@@ -4,9 +4,9 @@
 #include "save_game.h"
 using namespace std;
 
-void save_game(string *Pname, int *Phealth, int *Phitp, int *Psol, string *ChapNum){
+void save_game(string *Pname, int *Phealth, int *Phitp, int *Psol, string *ChapNum){//this functions saves the game status in Saved_Games directory by using file I/O
   string *FName = new string("");
-  *FName = "Saved_Games/" + (*Pname) + (*ChapNum) + ".txt";
+  *FName = "Saved_Games/" + (*Pname) + (*ChapNum) + ".txt";//The game status of the player is stored in a file named as the player name followed by the chapter number
   ofstream fout(((*FName).c_str()));
   fout<<*Pname<<" "<<*Phealth<<" "<<*Phitp<<" "<<*Psol;
   cout<<"Game Saved."<<endl;

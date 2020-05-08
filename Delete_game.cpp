@@ -5,12 +5,12 @@
 #include "Delete_game.h"
 using namespace std;
 
-void Delete_game(){
+void Delete_game(){//function that uses file I/O to update list of saved games and deletes a .txt after the file is deleted by the player using this function
   ifstream fin("Saved_Games/Saved_Games_num.txt");
   int *SavedNum = new int(0);
   fin>>*SavedNum;
   fin.close();
-  if(*SavedNum > 0){
+  if(*SavedNum > 0){//If number of saved games = 0, then the function will not ask the player to delete a game
     vector<string> s;
     string *f = new string("");
     char *C = new char('a');
@@ -18,7 +18,7 @@ void Delete_game(){
     string *Fn2 = new string("");
     string *Fname = new string("");
     while(*SavedNum > 0){
-      cout<<"Available games to load: (Player name followed by Chapter number)"<<endl;
+      cout<<"Available games to load: (Player name followed by Chapter number)"<<endl;//Asking the player to see if (s)he wants to delete one of the previously stored games
       *f = "";
       ifstream fi("Saved_Games/Saved_Games.txt");
       while(getline(fi, *f)){

@@ -3,18 +3,18 @@
 #include "Fight.h"
 using namespace std;
 
-bool Fight(int *Psol, int *Esol){
+bool Fight(int *Psol, int *Esol){//this function return true if the player loses a fight between soldiers
   cout<<endl;
   cout<<"Battle begins.\nSoldiers from both sides fight."<<endl;
   srand(time(NULL));
-  int *mercnum = new int((rand() % 6 + 4));
+  int *mercnum = new int((rand() % 6 + 4));//mercy number: if the player's soldiers is about 4%-10% less than enemy's soldiers then the player is shown mercy. (S)He will win this battle. THis number is randomly calcuklated
   if(*Psol < (*Esol - ((*Esol * (*mercnum)) / 100))){
     *Psol = -1;
   }
   else if(*Psol >= (*Esol -((*Esol * (*mercnum)) / 100)) && *Psol < *Esol){
     *Psol = *Psol - ((*Psol * (*mercnum + 85)) / 100);
   }
-  else{
+  else{//The loss in number of soldiers is calculated by subtracting a random percentage of the number of soldiers if number ofplayer's soldiers > enemy's soldiers
     *Psol = *Psol - ((*Psol * (*mercnum)) / 100);
   }
   delete Esol;
