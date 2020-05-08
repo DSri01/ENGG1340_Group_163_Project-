@@ -7,7 +7,7 @@
 #include "Chap3.h"
 using namespace std;
 
-void Chap3(string *Pname, int *Phitp, int *Phealth, int *Psol){
+bool Chap3(string *Pname, int *Phitp, int *Phealth, int *Psol){
   int *Lines = new int(7);
   string *ChapFiles = new string("Chapters/Chapter3c1.txt");
   PrintChapLines(ChapFiles, Lines);
@@ -46,13 +46,34 @@ void Chap3(string *Pname, int *Phitp, int *Phealth, int *Psol){
       int *Ehealth = new int(24);
       int *Esol = new int(150);
       int *difficult = new int(10);
-      Battle(Pname, Ename, Phealth, Phitp, Ehealth, Ehitp,difficult);
-      Fight(Psol, Esol);
+      if(Battle(Pname, Ename, Phealth, Phitp, Ehealth, Ehitp,difficult)){
+        delete Choice1;
+	Choice1 = 0;
+	delete ChoiceNum;
+	ChoiceNum = 0;
+	delete Lines;
+	Lines = 0;
+	delete ChapFiles;
+	ChapFiles = 0;
+	return true;
+      }
+      if(Fight(Psol, Esol)){
+        delete Choice1;
+	Choice1 = 0;
+	delete ChoiceNum;
+	ChoiceNum = 0;
+	delete Lines;
+	Lines = 0;
+	delete ChapFiles;
+	ChapFiles = 0;
+        return true;
+      }
     }
   }
   else{
     cout<<"You go ahead, ignoring the sounds of the animal.\n";
   }
+  return false;
 }
 /*
 int main(){

@@ -7,7 +7,7 @@
 #include<cstdlib>
 using namespace std;
 
-void Chap1(string *Pname, int *Phitp, int *Phealth, int *Psol, int *ChoiceC1){
+bool Chap1(string *Pname, int *Phitp, int *Phealth, int *Psol, int *ChoiceC1){
   int *Lines = new int(20);
   string *ChapFiles = new string("Chapters/Chapter1c1.txt");
   PrintChapLines(ChapFiles, Lines);
@@ -26,7 +26,15 @@ void Chap1(string *Pname, int *Phitp, int *Phealth, int *Psol, int *ChoiceC1){
   int *diff = new int(50);
   if(*ChoiceC1 == 1){
     cout<<"You pick up a shield that was lying near the bushes and run infront of the village head and defend him from the beast's claws."<<endl;
-    Battle(Pname, Ename, Phealth, Phitp, Ehealth, Ehitp, diff);
+    if(Battle(Pname, Ename, Phealth, Phitp, Ehealth, Ehitp, diff)){
+      delete ChapFiles;
+      ChapFiles = 0;
+      delete Lines;
+      Lines = 0;
+      delete ChoiceNum;
+      ChoiceNum = 0;
+      return true;
+    }
     *Psol = *Psol + 50;
     *Phealth = *Phealth + 5;
     *Phitp = 4;
@@ -34,7 +42,15 @@ void Chap1(string *Pname, int *Phitp, int *Phealth, int *Psol, int *ChoiceC1){
   }
   else{
     cout<<"You watch the beast killing the village head. You suddenly step on a stick and it breaks, the beast sees you and runs towards you."<<endl;
-    Battle(Pname, Ename, Phealth, Phitp, Ehealth, Ehitp, diff);
+    if(Battle(Pname, Ename, Phealth, Phitp, Ehealth, Ehitp, diff)){
+      delete ChapFiles;
+      ChapFiles = 0;
+      delete Lines;
+      Lines = 0;
+      delete ChoiceNum;
+      ChoiceNum = 0;
+      return true;
+    }
   }
   *ChapFiles = "Chapters/Chapter1c2.txt";
   *Lines = 3;
@@ -60,10 +76,7 @@ void Chap1(string *Pname, int *Phitp, int *Phealth, int *Psol, int *ChoiceC1){
       else{
         cout<<"You take an aggressive stance."<<endl;
 	if(*Psol <= 10){
-	  cout<<"The cannibals surround you and they kill you."<<endl;
-	  cout<<"GAME OVER"<<endl;
-	  cout<<"You can restart the game and play it from the beginning."<<endl;
-	  exit(0);
+	  return true;
 	}
 	else{
 	  srand(time(NULL));
@@ -92,6 +105,7 @@ void Chap1(string *Pname, int *Phitp, int *Phealth, int *Psol, int *ChoiceC1){
   Choice2 = 0;
   delete ChoiceNum;
   ChoiceNum = 0;
+  return false;
 }
 /*
 int main(){

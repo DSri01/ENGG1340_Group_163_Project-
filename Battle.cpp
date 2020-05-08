@@ -4,7 +4,7 @@
 #include "Battle.h"
 using namespace std;
 
-void Battle(string *Pname, string *Ename, int *Phealth, int *Phitp, int *Ehealth, int *Ehitp, int *difficult){
+bool Battle(string *Pname, string *Ename, int *Phealth, int *Phitp, int *Ehealth, int *Ehitp, int *difficult){
   string att_moves[5] = {"strikes from above", "strikes from below", "strikes from left", "strikes from right", "performs block break"};
   string def_moves[5] = {"defends above", "defends below", "defends left", "defends right", "performs complete block"};
   int *diffcount = new int(0);
@@ -72,9 +72,7 @@ void Battle(string *Pname, string *Ename, int *Phealth, int *Phitp, int *Ehealth
     }
     else{
       if(*Phealth <= 0){
-        cout<<"GAME OVER"<<endl;
-	cout<<"You can restart the game from the latest save by re-running the game"<<endl;
-	exit(0);
+        return true;
       }
       else{
         *mvcount = -1;
@@ -97,7 +95,7 @@ void Battle(string *Pname, string *Ename, int *Phealth, int *Phitp, int *Ehealth
   Ehitp = 0;
   delete difficult;
   difficult = 0;
-  return;
+  return false;
 }
 /*
 int main(){

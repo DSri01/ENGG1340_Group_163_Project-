@@ -3,7 +3,7 @@
 #include "Fight.h"
 using namespace std;
 
-void Fight(int *Psol, int *Esol){
+bool Fight(int *Psol, int *Esol){
   cout<<endl;
   cout<<"Battle begins.\nSoldiers from both sides fight."<<endl;
   srand(time(NULL));
@@ -17,21 +17,19 @@ void Fight(int *Psol, int *Esol){
   else{
     *Psol = *Psol - ((*Psol * (*mercnum)) / 100);
   }
+  delete Esol;
+  Esol = 0;
+  delete mercnum;
+  mercnum = 0;
   if(*Psol == -1){
-    cout<<"All your soldiers died."<<endl;
-    cout<<"GAME OVER"<<endl;
-    cout<<"You can restart the game from the latest save by re-running the game."<<endl;
-    exit(0);
+    return true;
   }
   else{
     cout<<"Your soldiers defeat the enemy soldiers."<<endl;
     cout<<"Number of soldiers left = "<<*Psol<<endl;
     cout<<endl;
+    return false;
   }
-  delete Esol;
-  Esol = 0;
-  delete mercnum;
-  mercnum = 0;
 }
 /*
 int main(){

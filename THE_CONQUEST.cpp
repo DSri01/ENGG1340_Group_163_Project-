@@ -8,6 +8,7 @@
 #include "load_game.h"
 #include "save_game.h"
 #include "Fortune_cookie.h"
+#include "Delete_game.h"
 using namespace std;
 
 void load(string *Pna, int *Phit, int *Pheal, int *Sol, string *ChapNum){
@@ -66,6 +67,21 @@ void save(string *Pna, int *Pheal, int *Phit, int *Psol, string *ChapNum){
   c = 0;
 }
 
+void Exit_Game(string *Pna, int *Phit, int *Pheal, int *Pso, string *CNum){
+  delete Pna;
+  Pna = 0;
+  delete Phit;
+  Phit = 0;
+  delete Pheal;
+  Pheal = 0;
+  delete Pso;
+  Pso = 0;
+  delete CNum;
+  CNum = 0;
+  Delete_game();
+  exit(0);
+}
+
 int main(){
   string *Pname = new string("");
   string *ChapNum = new string("0");
@@ -116,20 +132,53 @@ int main(){
   }
   if(*ChapNum == "1"){
     cout<<"\nChapter 1: THE FARMLANDS.\n\n";
-    Chap1(Pname, Phitp, Phealth, Psol, ChoiceInChap1);
+    if(Chap1(Pname, Phitp, Phealth, Psol, ChoiceInChap1)){
+      cout<<"Game Over"<<endl;
+      Exit_Game(Pname, Phitp, Phealth, Psol, ChapNum);
+    }
     *ChapNum = "2";
   }
   if(*ChapNum == "2"){
     cout<<"\nChapter 2: THE ENCHANTED FOREST.\n\n";
-    Chap2(Pname, Phitp, Phealth, Psol, ChoiceInChap1);
-    *ChapNum = "3";
-    save(Pname, Phitp, Phealth, Psol, ChapNum);
+    if(Chap2(Pname, Phitp, Phealth, Psol, ChoiceInChap1)){
+      cout<<"Game Over"<<endl;
+      Exit_Game(Pname, Phitp, Phealth, Psol, ChapNum);
+    }
+    else{
+      *ChapNum = "3";
+      save(Pname, Phitp, Phealth, Psol, ChapNum);
+      char *y_n = new char('a');
+      cout<<"Do you want to exit game?\nEnter Y for yes or any other character for no."<<endl;
+      cin>>*y_n;
+      if(*y_n == 'Y'){
+        delete y_n;
+        y_n = 0;
+        Exit_Game(Pname, Phitp, Phealth, Psol, ChapNum);
+      }
+      delete y_n;
+      y_n = 0;
+    }
   }
   if(*ChapNum == "3"){
     cout<<"\nChapter 3: THE RIVER.\n\n";
-    Chap3(Pname, Phitp, Phealth, Psol);
-    *ChapNum = "3";
-    save(Pname, Phitp, Phealth, Psol, ChapNum);
+    if(Chap3(Pname, Phitp, Phealth, Psol)){
+      cout<<"Game Over"<<endl;
+      Exit_Game(Pname, Phitp, Phealth, Psol, ChapNum);
+    }
+    else{
+      *ChapNum = "4";
+      save(Pname, Phitp, Phealth, Psol, ChapNum);
+      char *y_n = new char('a');
+      cout<<"Do you want to exit game?\nEnter Y for yes or any other character for no."<<endl;
+      cin>>*y_n;
+      if(*y_n == 'Y'){
+        delete y_n;
+        y_n = 0;
+        Exit_Game(Pname, Phitp, Phealth, Psol, ChapNum);
+      }
+      delete y_n;
+      y_n = 0;
+    }
   }
 //  cout<<*Pname<<" "<<*Phitp<<" "<<*Phealth<<" "<<*Psol<<" "<<*ChoiceInChap1<<endl;
 }
