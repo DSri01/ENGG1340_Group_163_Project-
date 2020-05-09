@@ -18,7 +18,7 @@ The points accumulated are used in battles and quests as the game progresses.
 
 **Step 1: Create the executable Game file** 
 
-The game is played by first entering command "make Game", which creates an executable file "Game".
+The game is played by first entering command "make Game", which creates an executable file "Game" (Though you do not need to enter command "make Game" again if "Game" executable file is already present).
 
 *Note:* You can use "make clean" command to remove all .o files
 
