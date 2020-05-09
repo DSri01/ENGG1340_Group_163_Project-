@@ -98,6 +98,7 @@ bool Battle(string *Pname, string *Ename, int *Phealth, int *Phitp, int *Ehealth
   return false;
 }
 /*
+The following code is to test the function (during development)
 int main(){
   string *Pname = new string("A1");
   string *Ename = new string("B2");

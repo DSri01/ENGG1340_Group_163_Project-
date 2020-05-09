@@ -99,8 +99,8 @@ bool Chap3(string *Pname, int *Phitp, int *Phealth, int *Psol){//Funtion to impl
   return false;//return false to the main function if the player survives this chapter
 }
 /*
+The following code is to test the function (during development)
 int main(){
-The following code is to test the function(during development).
   string *Pname = new string("A");
   int *phi = new int(4);
   int *phe = new int(5);

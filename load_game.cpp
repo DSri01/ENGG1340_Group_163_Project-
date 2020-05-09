@@ -37,6 +37,7 @@ void load_game(string *Pname, int *Phealth, int *Phitp, int *Psol, string *ChapN
   return;
 }
 /*
+The following code is to test the function (during development)
 int main(){
   string *PN = new string("");
   int *PHE = new int(0);

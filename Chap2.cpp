@@ -122,7 +122,7 @@ bool Chap2(string *Pname, int *Phitp, int *Phealth, int *Psol, int *ChoiceC1){//
   return false;//return false to the main function if the player survives in this chapter
 }
 /*
-The following code is to test the function(during development).
+The following code is to test the function (during development)
 int main(){
   string *Pname = new string("A");
   int *phi = new int(4);

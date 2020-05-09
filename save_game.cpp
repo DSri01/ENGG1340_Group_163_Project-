@@ -34,6 +34,7 @@ void save_game(string *Pname, int *Phealth, int *Phitp, int *Psol, string *ChapN
   FName = 0;
 }
 /*
+The following code is to test the function (during development)
 int main(){
   string *Pna = new string("A");
   int *phe = new int(10);

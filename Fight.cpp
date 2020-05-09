@@ -32,6 +32,7 @@ bool Fight(int *Psol, int *Esol){//this function return true if the player loses
   }
 }
 /*
+The following code is to test the function (during development)
 int main(){
 The following code is to test the function(during development).
   int *Pso = new int(1000);

@@ -29,6 +29,7 @@ void PrintChapLines(string *FileName, int *Lines){//THis function prints the Cha
   f = 0;
 }
 /*
+The following code is to test the function (during development)
 int main(){
   string *FN = new string("Chapter1.txt");
   int *L = new int(10);
