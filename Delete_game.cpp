@@ -21,28 +21,29 @@ void Delete_game(){//function that uses file I/O to update list of saved games a
       cout<<"Available games to load: (Player name followed by Chapter number)"<<endl;//Asking the player to see if (s)he wants to delete one of the previously stored games
       *f = "";
       ifstream fi("Saved_Games/Saved_Games.txt");
-      while(getline(fi, *f)){
+      while(getline(fi, *f)){//loop to display available saved games
 	      s.push_back(*f);
 	      cout<<*f<<endl;
       }
       fi.close();
-      cout<<"Do you want to delete any saved game?\nEnter 'Y' for yes or any other character for no."<<endl;
+      cout<<"Do you want to delete any saved game?"<<endl;
+      cout<<"Enter 'Y' for yes or any other character for no."<<endl;
       cin>>*C;
-      if(*C == 'Y'){
+      if(*C == 'Y'){//checking if user wants to delete previously saved games
         *Fn1 = "";
         *Fn2 = "";
 	      *Fname = "";
 	      cout<<"Enter Player Name and Chapter (with space) to delete game."<<endl;;
 	      cin>>*Fn1>>*Fn2;
 	      *Fname = "Saved_Games/" + (*Fn1) + (*Fn2) + ".txt";
-	      if(remove((*Fname).c_str())){
+	      if(remove((*Fname).c_str()) != 0){//checking if the file is removed. If it is then the input was valid
           cout<<"Enter correct player name and chapter number."<<endl;
 	      }
         else{
-  	      ofstream fout1("Saved_Games/Saved_Games_num.txt");
+  	      ofstream fout1("Saved_Games/Saved_Games_num.txt");//editing the number of saved games available
           fout1<<(*SavedNum - 1);
         	fout1.close();
-        	ofstream fout2("Saved_Games/Saved_Games.txt");
+        	ofstream fout2("Saved_Games/Saved_Games.txt");//editing the file storing the name of saved games
         	for(int i = 0; i < *SavedNum; i++){
         	  if(s[i] != (*Fn1 + *Fn2)){
         	    fout2<<s[i]<<endl;
@@ -50,7 +51,7 @@ void Delete_game(){//function that uses file I/O to update list of saved games a
         	}
           *SavedNum = *SavedNum - 1;
         	fout2.close();
-                s.clear();
+          s.clear();//clearing the vector
         }
       }
       else{

@@ -7,7 +7,7 @@ bool Fight(int *Psol, int *Esol){//this function return true if the player loses
   cout<<endl;
   cout<<"Battle begins.\nSoldiers from both sides fight."<<endl;
   srand(time(NULL));
-  int *mercnum = new int((rand() % 6 + 4));//mercy number: if the player's soldiers is about 4%-10% less than enemy's soldiers then the player is shown mercy. (S)He will win this battle. THis number is randomly calcuklated
+  int *mercnum = new int((rand() % 6 + 4));//mercy number: if the player's soldiers is about 4%-10% less than enemy's soldiers then the player is shown mercy. (S)He will win this battle. This number is calculated randomly.
   if(*Psol < (*Esol - ((*Esol * (*mercnum)) / 100))){
     *Psol = -1;
   }
@@ -33,6 +33,7 @@ bool Fight(int *Psol, int *Esol){//this function return true if the player loses
 }
 /*
 int main(){
+The following code is to test the function(during development).
   int *Pso = new int(1000);
   int *Eso = new int(50);
   Fight(Pso, Eso);

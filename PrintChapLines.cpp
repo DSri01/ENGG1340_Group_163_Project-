@@ -8,7 +8,7 @@ void PrintChapLines(string *FileName, int *Lines){//THis function prints the Cha
   ifstream fin((*FileName).c_str());
   string *f = new string("");
   string *s = new string("");
-  while(*Lines > 0){
+  while(*Lines > 0){//loop to print lines one by one
     getline(fin,*f);
     cout<<*f<<endl;
     *Lines = *Lines - 1;

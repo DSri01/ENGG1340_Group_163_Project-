@@ -44,11 +44,14 @@ void load(string *Pna, int *Phit, int *Pheal, int *Sol, string *ChapNum){//Funct
       }
     }
   }
+  else{
+    cout<<"No games available to load."<<endl;
+  }
   delete SavedNum;
   SavedNum = 0;
 }
 
-void save(string *Pna, int *Pheal, int *Phit, int *Psol, string *ChapNum){//function to save game status if the player wants to load the game later, by using file I/O
+void save(string *Pna, int *Pheal, int *Phit, int *Psol, string *ChapNum){//function to save game status if the player wants to load the game later, by using file I/O.
   cout<<"Do you want to save the game?"<<endl<<"Enter 'Y' for yes or any other character for no."<<endl;
   char *c = new char('a');
   cin>>*c;
@@ -70,7 +73,7 @@ void save(string *Pna, int *Pheal, int *Phit, int *Psol, string *ChapNum){//func
 
 void Exit_Game(string *Pna, int *Phit, int *Pheal, int *Pso, string *CNum){//function to delete dynamic variables and exit game and calls delete function to ask player if (s)he wants to delete a previously saved game
   cout<<"You are now exiting the game."<<endl;
-  cout<<"If you want to play again, execute the Game executable."<<endl;
+  cout<<"If you want to play again, run the Game executable file."<<endl;
   delete Pna;
   Pna = 0;
   delete Phit;
