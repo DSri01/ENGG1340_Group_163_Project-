@@ -18,13 +18,13 @@ The points accumulated are used in battles and quests as the game progresses.
 
 **Step 1: Create the executable Game file** 
 
-The game is played by first entering command "make Game", which creates an executable file "Game" (Though you do not need to enter command "make Game" again if "Game" executable file is already present).
+The game is played by first entering command "make Game", which creates an executable file "Game" (Though you do not need to enter command "make Game" again and again if "Game" executable file is already present).
 
-*Note:* You can use "make clean" command to remove all .o files
+*Note:* You can use "make clean" command to remove all .o files.
 
 **Step 2: Run the executable file**
 
-Run the executable file Game by the command "./Game"
+Run the executable file Game by the command "./Game".
 
 **Step 3: Enjoy**
 
@@ -63,7 +63,7 @@ Also, the function uses mercnum variable.
 There are other random elements as well in between some chapters, like strengh of enemy soldiers.
 
 ### 2. Data structures for storing game status:
-Game status is saved at various levels of progress throughout the game.
+Game status is saved at various levels of progress throughout the game. It is usually stored by using dynamic variables like: string Pname, int Phitp, int Phealth (or Pheal), and int Psol.
 
 Dynamic variables are passed through different functions. These dynamic variables store all the game status and they are deleted once they are not needed.
 
@@ -112,20 +112,21 @@ Pname for Player Name.
 
 Phitp for Player Hit Points.
 
-Pheal for Player Health Points.
+Pheal (or Phealth) for Player Health Points.
 
-Psol for Number of soldiers in Player's army.
+Psol (Player soldiers) for Number of soldiers in Player's army.
 
 ### 7. In-code documentation:
 Most of the commits made are accompanied by appropriate messages.
 
-The functions too contain comments to make the code easier to understand, yet more information about each function can be found in this README.md file under the "Description of functions" heading.
+The functions contain comments to make the code easier to understand.
 
-## Description of functions:
+## Description of functions used:
+The description of each function also includes the features used.
 ### 1. Battle
 This function is used for character battles. It returns true if player loses and false if player wins the fight.
 
-The moves of the enemy are **random**
+The moves of the enemy are **random**.
 
 It uses **Dynamic variables** for processing inputs and outputs.
 
@@ -139,12 +140,12 @@ It uses **Dynamic variables** for processing inputs and outputs.
 ### 3. Fortune_cookie
 This function prints a **random** fortune cookie(lucky numbers, colour and sentences).
 
-It also uses **File I/O** to print a **random** sentence and colour from a .txt file in Chapters directory
+It also uses **File I/O** to print a **random** sentence and colour from a .txt file in Chapters directory.
 
 It uses **Dynamic variables** for processing inputs and outputs.
 
 ### 4. PrintChapLines
-This function uses **File I/O** to print the story for all chapters from different .txt files in Chapters directory
+This function uses **File I/O** to print the story for all chapters from different .txt files in Chapters directory.
 
 It uses **Dynamic variables** for processing inputs and outputs.
 
