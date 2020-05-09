@@ -15,10 +15,15 @@ The player is provided with different choices at different stages throughout the
 The points accumulated are used in battles and quests as the game progresses.
 
 ## Instruction to play
+Please make sure that **all** the repository contents are present to play the game.
 
 **Step 1: Create the executable Game file** 
 
-The game is played by first entering command "make Game", which creates an executable file "Game" (Though you do not need to enter command "make Game" again and again if "Game" executable file is already present).
+To play the game, we have to create the exectable file "Game". To do so, enter command "make Game" in the terminal.
+
+Please enter "make Game" command when the repository contents are copied anywhere.
+
+(Though you do not need to enter command "make Game" again and again if "Game" executable file is already present, but, please enter command "make Game" if the repository, or its contents are copied the first time).
 
 *Note:* You can use "make clean" command to remove all .o files.
 
@@ -28,11 +33,11 @@ Run the executable file Game by the command "./Game".
 
 **Step 3: Enjoy**
 
-Just simply follow the game instructions that will be presented to you one by one when you start playing, for example, Enter s to continue, Enter your choice 1, 2 or 3, etc.
+Just simply follow the game instructions that will be presented to you one by one when you start playing, for example, Enter s to continue, Enter your choice 1, 2 or 3, Enter Y if you want to save game, etc.
 
 For Character Battles: enter left, right, above, or below as your moves to fight. 
 
-**For exiting game:** Exit when asked after completion of Chapters or intentionally lose the game (Your progress will not be stored if you lose).
+**For exiting game:** Exit when asked after completion of Chapters or intentionally lose the game (*Note:* Your progress will not be stored if you lose the game).
 
 ***Warning:*** Please enter as the characters as the game says as it is case sensitive. For example, when the game says enter 'Y' to do something please enter 'Y' only.
 
