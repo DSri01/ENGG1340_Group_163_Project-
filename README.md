@@ -187,7 +187,7 @@ The "save" function calls the save_game function if the user wants to save the c
 The "Exit_Game" function calls the "Delete_game" function and exits the game. It is called if the player loses the game or the player wants to exit the game (The option to exit game is available only after Chapter 2 and Chapter 3).
 
 ## Main Storyline:
-**Legeng(key):**
+**Legend(key):**
 -**(MAIN Character fight):** The main character will fight the enemy (with the statistics of the enemy being displayed). The enemy will use random moves to fight with the main character.
 
 -**Difficulty level** specifies the number of moves after which the enemy can break your block or block your move.
@@ -298,9 +298,9 @@ He hits you with an arrow.(1 Hit Point Lost).
 
 You try to maintain your stance but he hits you again with an arroww. (1 Hit Point Lost)
 
-**MAIN CHARACTER FIGHT** Enemy Cyrus
+**MAIN CHARACTER FIGHT** (Enemy Cyrus, Hit Point: 7, Health: 25, difficulty: 4)
 
-**Army Fights against 150 soldiers**
+**Army Fights against 400 soldiers**
 
 If player wins the above two battles:
 **“Player name” you have won the game.**
