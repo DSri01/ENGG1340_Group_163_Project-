@@ -87,11 +87,11 @@ The following functions use File I/O:
 
 **save and save_game:** To save game status in a .txt file in Saved_Games directory.
 
-**Delete_game:** To delete previously saved games in Saved_Games directory.
+**Delete_game:** To delete previously saved games in Saved_Games directory and updating the Saved_Games.txt and Saved_Games_num.txt files in Saved_Games directory.
 
-**PrintChapLines:** To print storyline for all chapter functions from Chapters directory.
+**PrintChapLines:** To print storyline for all chapter functions from .txt files in the Chapters directory.
 
-**Fortune_cookie:** To print the random sentence and colour from a .txt file in Chapters directory.
+**Fortune_cookie:** To print the random sentence and colour from Fortune_Cookies.txt file in Chapters directory.
 
 ### 5 Program codes in multiple files:
 Nearly all the functions are defined in different cpp and header files like:
@@ -99,7 +99,7 @@ Battle.cpp, Battle.h, Fight.cpp, Fight.h, Delete_game.cpp, Fortune_cookie.cpp, P
 
 The storylines are stored in various text files within Chapters.
 
-The Game is implemented using all the functions being called from one another, for instance, the main function calls the Chap1 function which in turns, calls Battle, Fight, PrintChapLines functions.
+The Game is implemented using all the functions being called from one another, for instance, the main function calls the Chap1 function, which in turn calls Battle, Fight, PrintChapLines, etc. functions.
 
 ### 6 Proper indentation and naming styles:
 The program uses legible and easy to understand coding indentation.
@@ -119,55 +119,72 @@ Psol for Number of soldiers in Player's army.
 ### 7 In-code documentation:
 Most of the commits made are accompanied by appropriate messages.
 
-The functions too contain comments to make the code easier to understand.
+The functions too contain comments to make the code easier to understand, yet more information about each function can be found in this README.md file under the "Description of functions" heading.
 
 ## Description of functions:
 #### Battle
-This function is used for character battles. It returns true if player loses and false if player wins.
+This function is used for character battles. It returns true if player loses and false if player wins the fight.
 
 The moves of the enemy are **random**
 
-It uses Dynamic variables for processing inputs and outputs.
+It uses **Dynamic variables** for processing inputs and outputs.
 
 #### Fight
-This function is used for army battles. It returns true if player loses and false if player wins.
+This function is used for army battles. It returns true if player loses and false if player wins the fight.
 
 The number of casualities is **random**.
 
-It uses Dynamic variables for processing inputs and outputs.
+It uses **Dynamic variables** for processing inputs and outputs.
 
 #### Fortune_cookie
 This function prints a **random** fortune cookie(lucky numbers, colour and sentences).
 
 It also uses **File I/O** to print a **random** sentence and colour from a .txt file in Chapters directory
 
-It uses Dynamic variables for processing inputs and outputs.
+It uses **Dynamic variables** for processing inputs and outputs.
 
 #### PrintChapLines
 This function uses **File I/O** to print the story for all chapters from different .txt files in Chapters directory
 
-It uses Dynamic variables for processing inputs and outputs.
+It uses **Dynamic variables** for processing inputs and outputs.
 
 #### load_game, Delete_game, and save_game
-These functions use **File I/O** to load or delete a previously stored game or save a new game in .txt files in Saved_Games directory
+These functions use **File I/O** to load or delete a previously stored game or save a new game in .txt files in Saved_Games directory. They use the number stored in Saved_Games_num.txt file and list of saved games stored in Saved_Games.txt to achieve their goal.
 
-They use the number stored in Saved_Games_num.txt file and list stored in Saved_Games.txt to achieve their goal.
+Delete_game also uses **vectors** to store the list of previously saved games.
 
-Delete_game also uses vectors to store the list of previously saved games.
-
-They use Dynamic variables for processing inputs and outputs.
+They use **Dynamic variables** for processing inputs and outputs.
 
 #### Choice
 This function uses sstream to record the choice of player and ensures that it is within the number of possible inputs.
 
-It uses Dynamic variables for processing inputs and outputs.
+It uses **Dynamic variables** for processing inputs and outputs.
 
 #### Chap1, Chap2, Chap3, and Chap4
 These functions use if-else, nested if and if-else-if statements to implement the chapters.
 
-They also call functions like Battle, Fight, PrintChapLines, and Choice for implementing the game
+They return true if player loses the game and false if player survives in the current chapter.
 
-They use Dynamic variables for processing inputs and outputs.
+They also call functions like Battle, Fight, PrintChapLines, and Choice for implementing the game.
+
+They use **Dynamic variables** for processing inputs and outputs.
+
+#### load, save and Exit_Game
+These functions are in the THE_CONQUEST.cpp file, which also contains the main function.
+
+**load:**
+
+The "load" function is called after welcome message and fortune cookie function (if player opts to take a fortune cookie).
+
+The "load" function calls the load_game function if the number of saved games (taken from Saved_Games_num.txt in Saved_Games directory using **File I/O**) is greater than 0. Please note that if no previously saved game is found then "No games available to load." is printed.
+
+**save:**
+
+The "save" function calls the save_game function if the user wants to save the current game (A player can save game before Chapter 1 and after Chapter 2 and Chapter 3).
+
+**Exit_Game:**
+
+The "Exit_Game" function calls the "Delete_game" function and exits the game. It is called if the player loses the game or the player wants to exit the game (The option to exit game is available only after Chapter 2 and Chapter 3).
 
 ## Main Storyline:
 **Legeng(key):**
