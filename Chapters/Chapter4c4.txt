@@ -9,4 +9,4 @@ Before you know, a cannonball falls close to you and you fell on the ground.
 You can't hear anything as you watch a flock of birds flying in the sky.
 You get up and see that all your soldiers are fighting and you see your uncle charging towards you.
 He hits you with an arrow.(1 Hit Point Lost).
-You try to maintain your stance but he hits you again with an arroww. (1 Hit Point Lost)
+You try to maintain your stance but he hits you again with an arrow. (1 Hit Point Lost)
