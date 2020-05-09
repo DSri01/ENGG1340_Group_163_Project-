@@ -296,7 +296,7 @@ You get up and see that all your soldiers are fighting and you see your uncle ch
 
 He hits you with an arrow.(1 Hit Point Lost).
 
-You try to maintain your stance but he hits you again with an arroww. (1 Hit Point Lost)
+You try to maintain your stance but he hits you again with an arrow. (1 Hit Point Lost)
 
 **MAIN CHARACTER FIGHT** (Enemy Cyrus, Hit Point: 7, Health: 25, difficulty: 4)
 
