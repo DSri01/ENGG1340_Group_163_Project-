@@ -38,7 +38,7 @@ For Character Battles: enter left, right, above, or below as your moves to fight
 
 
 ## Coding requirements:
-### 1 The Random Elements:
+### 1. The Random Elements:
 The player is provided a random fortune cookie in the beginning of the game, with lucky color and lucky number for the day.
 
 During the battles where soldiers fight, the loss of strength is calculated randomly (4% - 10% of the total number).
@@ -62,14 +62,14 @@ Also, the function uses mercnum variable.
 **Fortune_cookie:** The sentence, colour and lucky number are random.
 There are other random elements as well in between some chapters, like strengh of enemy soldiers.
 
-### 2 Data structures for storing game status:
+### 2. Data structures for storing game status:
 Game status is saved at various levels of progress throughout the game.
 
 Dynamic variables are passed through different functions. These dynamic variables store all the game status and they are deleted once they are not needed.
 
 The values of some dynamic variables is also stored in different .txt files for loading the game later.
 
-### 3 Dynamic memory management:
+### 3. Dynamic memory management:
 The player status throughout the game is stored in dynamic variables, which are deleted when the game is exited or when the function is ended.
 
 Nearly all functions use dynamic variables for nearly all the tasks, which are deleted when the variables are not needed anymore.
@@ -78,7 +78,7 @@ The pointers of these dynamic variables are passed to different functions where 
 
 Delete_game() function uses vector.
 
-### 4 File Input/Output:
+### 4. File Input/Output:
 The game extensively uses file input/output to print the story and to save game status.
 
 The following functions use File I/O:
@@ -93,7 +93,7 @@ The following functions use File I/O:
 
 **Fortune_cookie:** To print the random sentence and colour from Fortune_Cookies.txt file in Chapters directory.
 
-### 5 Program codes in multiple files:
+### 5. Program codes in multiple files:
 Nearly all the functions are defined in different cpp and header files like:
 Battle.cpp, Battle.h, Fight.cpp, Fight.h, Delete_game.cpp, Fortune_cookie.cpp, PrintChapLines.cpp, load_game.cpp, save_game.cpp, etc.
 
@@ -101,7 +101,7 @@ The storylines are stored in various text files within Chapters.
 
 The Game is implemented using all the functions being called from one another, for instance, the main function calls the Chap1 function, which in turn calls Battle, Fight, PrintChapLines, etc. functions.
 
-### 6 Proper indentation and naming styles:
+### 6. Proper indentation and naming styles:
 The program uses legible and easy to understand coding indentation.
 
 The variables used are named so as to increase comprehension but are not so long as to lose ease of readability.
@@ -116,51 +116,51 @@ Pheal for Player Health Points.
 
 Psol for Number of soldiers in Player's army.
 
-### 7 In-code documentation:
+### 7. In-code documentation:
 Most of the commits made are accompanied by appropriate messages.
 
 The functions too contain comments to make the code easier to understand, yet more information about each function can be found in this README.md file under the "Description of functions" heading.
 
 ## Description of functions:
-#### Battle
+### 1. Battle
 This function is used for character battles. It returns true if player loses and false if player wins the fight.
 
 The moves of the enemy are **random**
 
 It uses **Dynamic variables** for processing inputs and outputs.
 
-#### Fight
+### 2. Fight
 This function is used for army battles. It returns true if player loses and false if player wins the fight.
 
 The number of casualities is **random**.
 
 It uses **Dynamic variables** for processing inputs and outputs.
 
-#### Fortune_cookie
+### 3. Fortune_cookie
 This function prints a **random** fortune cookie(lucky numbers, colour and sentences).
 
 It also uses **File I/O** to print a **random** sentence and colour from a .txt file in Chapters directory
 
 It uses **Dynamic variables** for processing inputs and outputs.
 
-#### PrintChapLines
+### 4. PrintChapLines
 This function uses **File I/O** to print the story for all chapters from different .txt files in Chapters directory
 
 It uses **Dynamic variables** for processing inputs and outputs.
 
-#### load_game, Delete_game, and save_game
+### 5. load_game, Delete_game, and save_game
 These functions use **File I/O** to load or delete a previously stored game or save a new game in .txt files in Saved_Games directory. They use the number stored in Saved_Games_num.txt file and list of saved games stored in Saved_Games.txt to achieve their goal.
 
 Delete_game also uses **vectors** to store the list of previously saved games.
 
 They use **Dynamic variables** for processing inputs and outputs.
 
-#### Choice
+### 6. Choice
 This function uses sstream to record the choice of player and ensures that it is within the number of possible inputs.
 
 It uses **Dynamic variables** for processing inputs and outputs.
 
-#### Chap1, Chap2, Chap3, and Chap4
+### 7. Chap1, Chap2, Chap3, and Chap4
 These functions use if-else, nested if and if-else-if statements to implement the chapters.
 
 They return true if player loses the game and false if player survives in the current chapter.
@@ -169,7 +169,7 @@ They also call functions like Battle, Fight, PrintChapLines, and Choice for impl
 
 They use **Dynamic variables** for processing inputs and outputs.
 
-#### load, save and Exit_Game
+### 8. load, save and Exit_Game
 These functions are in the THE_CONQUEST.cpp file, which also contains the main function.
 
 **load:**
@@ -197,7 +197,7 @@ If enemy soldiers > the player’s soldiers, GAME OVER.
 
 ***Please note:*** There might be slight differences between the storyline below and the actual storyline in the game.
 
-## Chapter 1 “The Farmlands”:
+### Chapter 1 “The Farmlands”:
 Evening, Player(You) finds himself/herself in a village injured. Then a nurse tells you where she found you. You suddenly remember everything about yourself. You tell the nurse who you are, Prince/Princess PlayerName. She asks you to drink a potion while she goes away to call the village head. You fell asleep and you dream. You see yourself standing in your room. Your father, the king of Astonia, is standing in front of you, when suddenly a sword comes piercing through his heart. He falls down and you see your uncle holding the blood-covered sword. You wake up panting and find yourself tied to the bed. The village head is standing next to you. He says that he is your evil uncle’s supporter and that he will be rewarded if he hands you to him. He goes out. You cut the rope with the dagger (2 HIT POINT for every hit) that is hidden in your arm. Growling heard outside, you walk out, and see the village head looking at the source of the noise.(MAX HEALTH: 5)\
 -**Choice 1:** Either save the village head or go away.
       -***If save:*** find out what the beast is, choose from numbers 1-5(lion/cheetah/tiger/jaguar/leopard.). You pick up the shield and run   in front of the village head and defend him from the beasts’ claw. (MAIN CHARACTER FIGHT) (Max Health: 5, Hit Point: 1 Difficulty: 0 ) Completion rewards: +50 soldiers, new armour Max Health increases to 10, you get a sword (Hit point 4) + A safe route through the enchanted forest.
@@ -214,7 +214,7 @@ You go ahead. It’s morning time, you reach a hut by the river where you see an
 completion rewards: New ally Cameron. The man is an archer and commands 25 soldiers of his tribe Army strength +35.
 -***Else:*** You go ahead.
 
-## Chapter 2 “The Enchanted Forest”: 
+### Chapter 2 “The Enchanted Forest”: 
 If you do not save the village head:, then fight 25 soldiers as your uncle has been told your position by the village people.
 (Main Character fight: 1 man, 10-Heath point, 1-Hit point Difficulty: 20)(Soldiers fight 24) After the fight you try to figure out the way through the forest with the help of the map that fell from one of the soldier’s armour.
 If you save the village head, You remember the safest path through the forest, the village head told you about. You see the path in front of you and go ahead.
@@ -231,7 +231,7 @@ The creature dissolves into a thick dense fog all around you. But then you hear 
 You encounter 20 guards. (+25 if the village head was not saved)
 After your battle with the guards, you finally get out of the forest.
 
-## Chapter 3 “Cave Behind the waterfall”: 
+### Chapter 3 “Cave Behind the waterfall”: 
 As you come out of the enchanted forest, you hear the sound of a waterfall, you know that you are near a lake but you also hear a howling sound nearby. Looks like somebody/something is in pain. You know that the wild animals from the forest come to the river to drink water.
 -**Choice 4:** Follow the sound
    -***If yes:*** You see a bear which is stuck in one of the traps laid by the hunters. Choice 4a: you can approach this bear Aggressively, fearfully, Politely but cautiously, indifferently and in an ignoring manner
@@ -248,7 +248,7 @@ As you come out of the enchanted forest, you hear the sound of a waterfall, you 
 
 Feeling tired from all that you have been through you decide to find a place to rest. You spot a cave behind the waterfall and decide to go there. You eat some fruits and try to catch some sleep. You awake to the sound of thunder and heavy rainfall. The rain is too heavy and it is nearly impossible to go out so you decide to wait a little longer. You spot some carvings on the walls of the cave and as you follow them you see that they lead deep inside the cave. You follow them and realize it goes deeper than you realized. You reach the end and find yourself amongst rocky mountains. 
 
-## Chapter 4 "THE FINAL BATTLE":
+### Chapter 4 "THE FINAL BATTLE":
 You have reached the farmlands surrounding the castle.
 
 Everyone seems to be surprised to see you.
