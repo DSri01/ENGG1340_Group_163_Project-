@@ -35,7 +35,7 @@ void Delete_game(){//function that uses file I/O to update list of saved games a
 	      cout<<"Enter Player Name and Chapter (with space) to delete game."<<endl;;
 	      cin>>*Fn1>>*Fn2;
 	      *Fname = "Saved_Games/" + (*Fn1) + (*Fn2) + ".txt";
-	      if(!remove((*Fname).c_str())){
+	      if(remove((*Fname).c_str())){
           cout<<"Enter correct player name and chapter number."<<endl;
 	      }
         else{
