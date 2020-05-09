@@ -52,7 +52,7 @@ bool Chap4(string *Pname, int *Phitp, int *Phealth, int *Psol){//Funtion to impl
   string *Ename = new string("Cyrus");//storing enemy's data
   int *Ehitp = new int(7);
   int *Ehealth = new int(25);
-  int *Esol = new int(100);
+  int *Esol = new int(400);
   int *difficult = new int(4);
   if(Battle(Pname, Ename, Phealth, Phitp, Ehealth, Ehitp,difficult)){//return true to the main function if player loses the fight
     Choice1 = 0;
